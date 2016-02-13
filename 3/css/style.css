@@ -1,0 +1,126 @@
+* {
+margin:0px;
+padding:0px;
+color:black;
+list-style: none;
+text-decoration:none;
+}
+body {
+ background-color:#f9f9f9;
+ font-family:sans-serif; 
+}
+
+
+.page {
+margin-left: 154px;
+padding:0px 45px 0px 45px;
+width:970px;
+height: 950px;
+background-color:#fff;	
+box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+}
+
+
+
+.header {
+padding-top:50px;
+background-color:white;
+}
+.logo {
+margin-bottom:40px;
+width:143px;
+height:40px;
+background-image:url("../img/logo.jpg");
+}
+.top_nav {
+background: linear-gradient(to bottom,#5e5e5e, #444444);
+}
+.top_nav li {
+display:inline-block;
+height:40px;
+}
+.top_nav li:hover {
+background: linear-gradient(to bottom,#4a4a4a, #2f2f2f);
+border-right:1px solid #fff;
+border-left:1px solid #fff;
+}
+.top_nav a {
+display: block;
+padding: 10px 40px;
+color:white;
+font-size:15px;
+}
+
+
+
+.sidebar {
+float:left;
+width:30%;
+height:600px;
+}
+.sidebar-nav {
+width:240px;
+margin-top:40px;
+}
+.sidebar-nav a{
+margin-bottom:-1px;
+padding: 12px 22px;
+display:block;
+border:1px solid #ccc;
+
+color:#777;
+font-size:13px;
+}
+.sidebar-nav a:hover{
+padding-left:32px;
+background-color:#f9f9f9;
+}
+.content{
+float:right;
+width:70%;
+height:600px;
+}
+.main::after{
+content:'';
+display:table;
+clear:both;
+}
+.content-bike{
+margin-top:40px;
+width:678px;
+height:400px;
+background-image:url("../img/bike.jpg");
+background-size:100% 100%; 
+}
+.content-text{
+margin:37px 0 0 23px;
+font-size:13px;
+line-height:22px;
+}
+
+
+
+.footer{
+margin-top:75px;
+height:40px;
+background-color:#e1e1e1;
+}
+.footer-nav{
+font-size:13px;
+}
+.footer-nav li{
+padding: 15px  40px 0px 40px;
+display:inline-block;
+}
+.footer-nav li:last-of-type
+{
+padding: 0px;
+margin-left: 280px;  
+}
+.footer-nav a{
+display:block;
+vertical-align:middle;  /*не работает?*/
+}
+.footer-nav a:hover{
+text-decoration: underline;
+}

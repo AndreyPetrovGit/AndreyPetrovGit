@@ -1,0 +1,138 @@
+* {
+	margin:0;
+	padding:0;
+	text-decoration: none;
+	list-style:none;
+}
+body{
+/*	background-image: url("../img/background.jpg");   0c739f-40c6d3 fff-13cde1  5ef0ff 128aa7
+	background-repeat: repeat-x;
+	 -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;*/
+}
+
+.background-top{
+
+background-image: url("../img/background-top.jpg");
+width:100%;
+height:175px;
+
+}
+.background-bottom{
+background-image: url("../img/background-bottom.jpg");
+width:100%;
+ min-height: 850px;
+top:175px;
+}
+.background-top,
+.background-bottom{
+	position:absolute;
+	background-repeat: repeat-x;
+    z-index:-1;
+      
+}
+.wrapper{
+	margin-left:150px;
+	width:1000px;
+    min-height: 650px;
+    background-color: white;
+    
+}
+.logo{
+margin:20px 0px 0px 20px;
+
+}
+.contacts{
+display:inline-block;
+margin:10px  25px 0px 0px;
+font-size:12px;
+line-height: 18px;
+font-family:sans-serif;
+color:#5fa5bb;
+}
+.contacts p:first-of-type{
+font-weight:600;
+}
+.beach{
+/display:block;
+margin-top:-3px;
+}
+.main-menu{
+
+ background-color: #000;
+}
+.main-menu>li{
+position: relative;
+float:left;
+}
+.main-menu a {
+  display: block;  
+  color:#fff;
+  font-size:16px;  
+}
+.main-menu>li>a { 
+ padding:7px 35px;
+}
+.main-menu>li:hover .sub-menu {
+display: block;
+background-color: #000;
+}
+.main-menu .sub-menu{
+display: none; 
+position: absolute; 
+left: 30px;
+top: 30px;
+width: 150px;
+}
+.main-menu .sub-menu a{
+padding:5px;
+}
+.clierfix::after{
+content:'';
+clear:both;
+display:block;
+}
+.column-wrapper{
+	width:1000px;
+	overflow:hidden;
+
+}
+
+.left-column{
+	padding:15px;
+width: 180px;
+float: left;
+background: #edeef0;
+padding-bottom: 20000px;
+margin-bottom: -20000px;
+}
+.center-column{
+	
+width: 580px;
+float: left;
+background: #fff;
+padding-bottom: 20000px;
+margin-bottom: -20000px;	
+}
+.right-column{
+	padding:15px;
+	width: 180px;
+
+float: left;
+background: #edeef0;
+padding-bottom: 20000px;
+margin-bottom: -20000px;
+}
+.copyright{
+	display:block;
+	margin-left:550px;
+	margin-top:10px;
+    color:white;
+    font-size:13px;
+}
+.column-wrapper h3{
+	text-align:center;
+	font-size:20px;
+}
