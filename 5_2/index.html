@@ -4,79 +4,93 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.css">
-	<style>
-
-
-
-@font-face {
-    font-family:"Helvetica Neue Cyrthin";
-    src: url('fonts/helveticaneuecyr-thin-webfont.eot');
-    src: url('fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneuecyr-thin-webfont.woff2') format('woff2'),
-         url('fonts/helveticaneuecyr-thin-webfont.woff') format('woff'),
-         url('fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}</style>
 </head>
 <body>
-	<div class="header clierfix">
-
-		<div class="ola">
-			Ola! 
-			<a href="#">Entarar</a>
-			ou
-			<a href="#">Cadastre-se</a>
-		</div>
-
-		<div class="flag">
-		<img src="img/flag.png" alt="flag">
-			Minhas Ofertes
-		</div>
-		<ul class="menu">
-			<li><a href="#">Meu YouBike</a></li>
-			<li><a href="#">Vender</a></li>
-			<li><a href="#">Forum</a></li>
-			<li><a href="#">Contanto</a></li>
-			<li><a href="#">Ajuda</a></li>
-		</ul>
-
-		
-	</div>
-	<div class="background">
-		<div class="log-box">
-		    <h2>
-		    	Cadaste-se
-		    </h2>
-		    <div class="align">
-			    <a href="#" class="facebook">
-			    	<img src="img/facebook.jpg" alt="facebook">
-			    </a>
-			    <div class="ou">
-			    	OU
-			    </div>
-				<form action="/" method="post">
-					<input class="input" type="text" placeholder="First name" id="1">
-					<input  class="input" type="text" placeholder="Last Name" id="2">
-					<input  class="input" type="text" placeholder="Email Address" id="3">
-					<input  class="input" type="password" placeholder="Choose Password" id="4">
-					<input  class="input" type="password" placeholder="Password Confirm" id="5">
-					<input  class="checkbox" type="checkbox"  id="6">
-					<label for="6">
-						Send me Youbike updates and tips
-					</label>
-					<br>
-					<input class="submit" type="submit" value="Create my Account">
-				</form>
-			</div>
-			<p class="agree-text">
-				By clicking the button, you agree to the Terms of Service
-				<br>
-				Xiew our Privacy Polycy.
-			</p>
-		    
-		</div>
-	</div>
+	<div  class="wrapper">
+		<table class="table">
+			
+			<tr>
+				<td class="white" colspan="2">1</td>
+				<!-- <td class="white">2</td> -->
+				<td class="white" colspan="3">3</td>
+				<!-- <td class="white">4</td>
+				<td class="white">5</td> -->
+				<td class="yellow" colspan="2">6</td>
+			<!-- 	<td class="yellow">7</td> -->
+			</tr>
+			<tr>
+				<td class="white" rowspan="2">1</td>
+				<td class="red" colspan="4" rowspan="4">2</td>
+			<!-- 	<td class="red">3</td>
+				<td class="red">4</td>
+				<td class="red">5</td> -->
+				<td class="yellow" colspan="2" rowspan="2">6</td>
+				<!-- <td class="yellow">7</td> -->
+			</tr>
+			<tr>
+				<!-- <td class="white">1</td> -->
+			<!-- 	<td class="red" colspan="4" >2</td> -->
+				<!-- <td class="red">3</td>
+				<td class="red">4</td>
+				<td class="red">5</td> -->
+			<!-- 	<td class="yellow" colspan="2">6</td> -->
+				<!-- <td class="yellow">7</td> -->
+			</tr>
+			<tr>
+				<td class="white" rowspan="3">1</td>
+				<!-- <td class="red" colspan="4">2</td> -->
+				<!-- <td class="red">3</td>
+				<td class="red">4</td>
+				<td class="red">5</td> -->
+				<td class="white" rowspan="2">6</td>
+				<td class="white" rowspan="2">7</td>
+			</tr>
+			<tr>
+			<!-- 	<td class="white">1</td> -->
+				<!-- <td class="red" colspan="4">2</td> -->
+			<!-- 	<td class="red">3</td>
+				<td class="red">4</td>
+				<td class="red">5</td> -->
+			<!-- 	<td class="white">6</td>
+				<td class="white">7</td> -->
+			</tr>
+			<tr>
+				<!-- <td class="white">1</td> -->
+				<td class="black">2</td>
+				<td class="black">3</td>
+				<td class="white"  >4</td>
+				<td class="white">5</td>
+				<td class="white"  colspan="2">6</td>
+				<!-- <td class="white">7</td> -->
+			</tr>
+			<tr>
+				<td class="yellow" rowspan="3">1</td>
+				<td class="black">2</td>
+				<td class="black">3</td>
+				<td class="white"  colspan="2">4</td>
+				<!-- <td class="white">5</td> -->
+				<td class="blue"  colspan="2" rowspan="2">6</td>
+				<!-- <td class="blue">7</td> -->
+			</tr>
+			<tr>
+				<!-- <td class="yellow">1</td> -->
+				<td class="white "  colspan="2" rowspan="2">2</td>
+				<!-- <td class="white">3</td> -->
+				<td class="black" colspan="2">4</td>
+				<!-- <td class="black">5</td> -->
+				<!-- <td class="blue" rowspan="2">6</td>
+				<td class="blue">7</td> -->
+			</tr>
+			<tr>
+				<!-- <td class="yellow">1</td> -->
+			<!-- 	<td class="white">2</td>
+				<td class="white">3</td> -->
+				<td class="white" colspan="4">4</td>
+				<<!-- td class="white">5</td>
+				<td class="white">6</td>
+				<td class="white">7</td> -->
+			</tr>
+		</table>
+	<div>
 </body>
 </html>
