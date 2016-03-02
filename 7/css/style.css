@@ -13,6 +13,22 @@ background-size:100% 100%;
 	
 	
 }
+.logo{
+	display: block;;
+	float:left;
+}
+.menu--header{
+
+	margin-left: 150px;
+	
+	float:left;
+	width: 650px;
+	font-size: 18px;
+
+}
+.menu--header .menu__a:hover{
+border-bottom:2px solid #edbfff;
+}
 .wrapper{
 	margin:0 auto;
 	position:relative;
@@ -60,51 +76,98 @@ transform: rotate(180deg);
 .article--description{
 	position:relative;
 }
+.article--description .article__text{
+color:white;
+font-weight:100;
+}
 .article--description .article__headline{
+	font-size: 20px;
 	color:white;
 }
 .article--description::before{
 	position:absolute;
+	left:-15%;
+	top:5px;
 	width:28px;
 	height: 28px;
-	background-image: url("../img/wrench.png");
+	background-image: url("../img/about-sprite.png");
 	content:'';
+}
+.article--description:nth-of-type(2)::before{
+background-position: 28px 0px;
+}
+.article--description:nth-of-type(3)::before{
+background-position: 57px 0px;
 }
 .article--description::after{
 position:absolute;
-bottom:10px;
-right:10px;
+bottom:-50px;
+right:14px;
 width:80px;
 height: 28px;
 content:'READ MORE';
-font-size:12px;
+font-size:13px;
+font-weight: bold;
 color:white;
 }
 .background--comment{
 	background-color: #f9f9f9;
 
 }
-.article--pinguller{
-	background-color: #fff;
 
-}
 .article--pinguller::before{
 	position:absolute;
-	width:28px;
-	height: 28px;
+	top:10px;
+	left:-30px;
+	width:52px;
+	height: 53px;
+	border-radius: 50%;
 	background-image: url("../img/man.png");
 	content:'';
 }
 .article--pinguller::after{
 	position:absolute;
-	width:60px;
-	height: 25px;
+	left:170px;
+	bottom:-30px;
+	width:89px;
+	height: 23px;
 	background-image: url("../img/pinguller_after.png");
 	content:'';
 }
+.article__headline--pink{
+	color:#edbfff;
+}
+.article--comment .article__update::before{
+     	background-image: url("../img/balls.png");
+     	background-position:0px 0px;
+     	content:'';
+     	position:absolute;
+     	left:55px;
+     	width:49px;
+     	height:49px;
+ }
+.article--comment
+{
+	position: relative;
+}
 
+.article--comment .article__update:nth-child(2)::before{
+background-position:0px 50px;
+ }
+.article--comment .article__update:nth-child(3)::before{
+background-position:0px 101px;
+ }
 .background--news{
 	background-color: #ececec;
+}
+.article--comment::after
+{
+position:absolute;
+content:'READ MORE HERE';
+right:110px;
+bottom:-10px;
+font-size:13px;
+font-weight: bold;
 }
 
 .footer{
@@ -266,10 +329,11 @@ color:white;
        ;
 	}
 	.wrapper--header{
-		 height:278px
+		padding-top:70px;
+		 height:208px
 	}
    .menu--header{
-   margin-left:16%;
+/*   margin-left:16%;*/
   
    }
    .background--ahead{
@@ -307,7 +371,8 @@ color:white;
 	right:50%;
    }
 	.background--description{
-	height:343px;
+		padding-top:77px;
+	height:266px;
 	}
 	.article--header{
 		width:502px;
@@ -325,16 +390,37 @@ color:white;
 	font-size:14px;
 	}
 	.background--comment{
-     height:609px;
+		padding-top:102px;
+     height:507px;
 	}
-	.article--pinguller,
+	
 	.article--comment{
     width:400px;
 	height:300px;
 	}
 	.article--pinguller{
-	background-color: #fff;
-	}
+
+	background-image: url("../img/wBox_960px.png");
+	padding:20px;
+	width:387px;
+	height:252px;
+	line-height: 22px;
+     }
+     .article--pinguller .article__headline{
+	font-size: 18px;
+	font-weight: bold;
+     }
+     .article--comment{
+     padding:20px 60px;
+     width:380px;
+	height:234px;
+	
+     }
+.article__update{
+	padding:20px;
+	margin-left: 50px;
+
+}
 	.background--news{
     height:396px;
 	}
