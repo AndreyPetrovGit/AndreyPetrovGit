@@ -4,6 +4,10 @@ margin:0;
 padding:0;
 font-family: tahoma;
 }
+
+header, nav, section, article, aside, footer {
+   display:block;
+}
 	.clierfix::after{
 	content:'';
 	clear:both;
@@ -11,8 +15,8 @@ font-family: tahoma;
 }
 .background--header{
 display:block;
-background-image: url("../img/top-background.jpg");
-background-size:100% 100%;
+background-image: url(../img/top-background.jpg) ;
+/*background-size:100% 100%;*/
 }
 
 .logo{
@@ -822,6 +826,7 @@ text-align: center;
 	.menu__li{
 	float:left;
 	display:block;
+	
 	margin-left:1.5%;
 	margin-right:1.5%;
 }
