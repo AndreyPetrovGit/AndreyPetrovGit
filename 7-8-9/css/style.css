@@ -15,8 +15,10 @@ header, nav, section, article, aside, footer {
 }
 .background--header{
 display:block;
-background-image: url(../img/top-background.jpg) ;
-/*background-size:100% 100%;*/
+/*background-image: url(../img/top-background.jpg) ;*/
+background: url(../img/top-background.jpg) top center no-repeat;
+background-size: cover;
+
 }
 
 .logo{
@@ -212,6 +214,11 @@ width:85px;
 	.background--header{
 		height:516px;
 	}
+	.background--header{
+
+/*background-size: 2400px 516px;*/
+}
+
 	.wrapper{
 		width:280px;
 		/*padding:0px 20px;*/
@@ -403,6 +410,7 @@ text-align: center;
 		}
 		.background--header{
 		height:549px;
+	/*	background-size: 2400px 549px;*/
 		border-bottom:1px solid #550055;
 		}
 	    .background--ahead .background__img:first-of-type{
@@ -599,7 +607,7 @@ text-align: center;
 
 }
 @media (min-width: 768px)  and (max-width: 959px){
-	header{
+	.header{
 		height:320px;
 	}
 	.wrapper{
@@ -612,6 +620,7 @@ text-align: center;
 	}
 	.background--header{
 	height:798px;
+	/*background-size: 2400px 798px;*/
 	}
 	.logo{
 	margin-left:10px;
@@ -803,8 +812,7 @@ text-align: center;
 	.background--header{
 		height:846px;
         background-image: url("../img/background--header_960px.jpg");
-        background-size:100% 100%;
-        background-repeat: no-repeat;
+        /*background-size: 2400px 846px;*/
        
 	}
 	.wrapper--header{
