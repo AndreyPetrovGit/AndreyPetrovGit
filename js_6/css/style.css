@@ -3,3 +3,12 @@
    font-size:200px;
 	color:rgba(0,255,0,0.5);
 }
+.button{
+	display: inline-block;
+	color:rgba(0,0,0,0.5);
+	background-color: #aaa;
+	width:560px;
+	height:100px;
+	margin:10px;
+	font-size:80px;
+}
