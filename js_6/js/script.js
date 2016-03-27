@@ -34,6 +34,7 @@ function resetTimer(){
 	_time.isActive=false;
 	_time.Start_time=0;
 	_time.End_time=0;
+	_time.save_time=0;
 
 }
 var _time={
@@ -88,6 +89,7 @@ function startTimer() {
 		if(_time.addition_time<1000){
 			ms=''+ _time.addition_time;
 		}
+		//if (ms.length< 3 ) s = "0" + s;
 	  if (s.length< 2 ) s = "0" + s;
 	  if ( m.length< 2) m = "0" + m;
 	  if ( h.length< 2) h = "0" + h;
