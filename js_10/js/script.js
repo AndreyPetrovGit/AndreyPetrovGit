@@ -22,6 +22,7 @@
 // 	      menu((Sub_deep-1),item_count,(Class_Name+i));
 //      }
 // }	
+var a=0;
 $(function() {
 	//------------------------------ Slider---------------------------------------
     $('.jcarousel').jcarousel({
@@ -29,10 +30,20 @@ $(function() {
     });
     $('.prev').click(function() {
     $('.jcarousel').jcarousel('scroll', '-=1');
+    a--;
+    if(a==-1){
+    	a=2;
+    	$('.jcarousel').jcarousel('scroll', '+=2');
+    }
 	});
 
 	$('.next').click(function() {
     $('.jcarousel').jcarousel('scroll', '+=1');
+    a++;
+    if(a==3){
+    	a=0;
+    	$('.jcarousel').jcarousel('scroll', '-=2');
+    }
 	});
     //---------------------------------Menu	-------------------------------------------
    // menu(3,5,'.sub_menu');
@@ -73,21 +84,6 @@ $(function() {
 			$("#country_id").selectbox();
 		});
 
-	$("ul").mouseenter(
-	    function () {
-		$(this).animate({
-			backgroundColor:"#fff",
-	    }, 100 );
-	}
-	);
-
-	$("ul").mouseleave(function() {
-		$(this).animate({
-			backgroundColor:"#a00",
-	    }, 100 );
-
-	}
-	);
 
 
 
