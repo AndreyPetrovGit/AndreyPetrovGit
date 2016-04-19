@@ -40,14 +40,13 @@ have a fixed width and height (but it's not required).
 *{
     margin:0;
     padding:0;
-       color:#B9B7B7;
 }
 body{
     background-color: rgba(0,0,0,0.85);
 }
 .header{
     display: block;
-    width:100px;
+    width:150px;
     margin:0 auto;
 }
 .Programming{
@@ -55,26 +54,26 @@ body{
     margin-left: 200px;
     width:200px;
 }
-.text{
+.Description{
     display:block;
     width:1200px;
     margin:0 auto;
 
 }
+.text{
+       color:#B9B7B7;
+
+}
 .prev,
 .next{
-    background-image: url("../img/arrow.png");
+ 
     background-repeat: no-repeat;
     position:absolute;
     width:28px;
     height:38px;
-    content:'';
-    display:block;
-    z-index: 99999;
-    cursor: pointer;
     top:300px;
-
- border-radius: 10%;
+    border-radius: 10%;
+    cursor:pointer;
 }
 .prev{
     left:30px;
@@ -107,11 +106,31 @@ right:30px;                 /*error #1*/
 margin:0 40px;
 display: inline-block;
 padding:7px 5px;
-background-color:black;
+/*background-color:black;*/
 cursor: pointer;
 
 }
+.sub_menu li li::after,.sub_menu>li::after{
+    background:url("../img/low_arrow.gif");
+content:'';
+display:block;
+position:absolute;
+width:15px;
+}
+.sub_menu>li::after{
+height:5px;
+background-position: 0px -5px;
+bottom:4px;
+left:10px;
+}
+.sub_menu li li::after{
 
+height:7px;
+background-position: 0px -3px;
+transform: rotate(-90deg);
+bottom:10px;
+left:130px;
+}
 .sub_menu4>li,.sub_menu44>li,.sub_menu444>li{
     position: relative;
 padding:5px 20px;
@@ -120,6 +139,7 @@ border-left: 3px solid #a00;
     z-index: 2;
 
 }
+
 .sub_menu4,.sub_menu44,.sub_menu444{
 list-style:none;
  display: none; 

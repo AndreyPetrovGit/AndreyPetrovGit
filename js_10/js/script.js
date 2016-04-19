@@ -1,4 +1,4 @@
-
+//     !!!!!ВОПОРС №0!!!!!
 // function menu(Sub_deep,item_count,Class_Name)
 // {
 //      if(Sub_deep===0){return;}
@@ -38,35 +38,28 @@ $(function() {
    // menu(3,5,'.sub_menu');
    	$('.sub_menu>li:last-of-type').hover(  //,.sub_menu4,.sub_menu44,.sub_menu444
         function () {
-            //показать подменю
             $('.sub_menu4').slideDown(300);  
           
         },
         function () {
-            //скрыть подменю
             $('.sub_menu4').slideUp(0);
            
         }
    
      ); 
-   	$('.sub_menu4>li:last-of-type').hover(  //,.sub_menu44,.sub_menu444
+   	$('.sub_menu4>li:last-of-type').hover( 
         function () {
-            //показать подменю
             $('.sub_menu44').slideDown(300);  
-            
         },
         function () {
-            //скрыть подменю
             $('.sub_menu44').slideUp(0);
-           
         }
    
      ); 
    	$('.sub_menu44>li:last-of-type').hover(  //,.sub_menu444
         function () {
-            //показать подменю
             $('.sub_menu444').slideDown(300);  
-          
+    
         },
         function () {
             //скрыть подменю
@@ -79,6 +72,24 @@ $(function() {
    	$(function () {
 			$("#country_id").selectbox();
 		});
+
+	$("ul").mouseenter(
+	    function () {
+		$(this).animate({
+			backgroundColor:"#fff",
+	    }, 100 );
+	}
+	);
+
+	$("ul").mouseleave(function() {
+		$(this).animate({
+			backgroundColor:"#a00",
+	    }, 100 );
+
+	}
+	);
+
+
 
 
 });
