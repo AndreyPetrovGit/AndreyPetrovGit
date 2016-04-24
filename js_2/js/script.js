@@ -33,21 +33,21 @@ function HTML_MANAGER(name,NewClass,propertie_key_value){
         if(propertie_key_value!==undefined && propertie_key_value!=='none'){
             this.MyTag.style[propertie_key_value[0]]=propertie_key_value[1];
         }
-    }
+    };
     this.del_el=function(selector,positionOfElement){
       var elForDel=document.querySelectorAll(selector);
       elForDel[positionOfElement].removeChild();
-    }
+    };
     this.get_all=function(){
 
-    }
+    };
     this.add_n_el=function(tag, parent_selector,position,NewClass,text_content, how){
       for(var i=0;i<how;++i){
         this.add_el(tag, parent_selector,position,NewClass,text_content[i]);
       }
 
-    }
- };
+    };
+ }
 
 var style=['backgroundColor','#aaa'];
 var testPage=new HTML_MANAGER('body','none',style);
