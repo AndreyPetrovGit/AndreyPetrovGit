@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+ 
+
+   <script src="js/jQ.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+ <script src="js/script.js"></script>
+</head>
+<body>
+	<img src="img/google.jpg" alt="google" class="logo">
+	<form action="">
+		<input id="google_input" type="text" name="query">
+		<input type="submit" value="Search" name="search">
+	</form>
+	<script type="text/html" id="results">
+		<% for(var i=0;i<5;++i){%>
+		<div class="search_result">
+			<p>Resuly <%=i%></p>
+		</div>
+		<% }%>
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.logo{
+  display:block;
+  margin:150px auto 0px auto;
+  width:350px;
+  height:200px;
+}
+input[name="query"]{
+  padding:10px;
+  display:block;
+  margin:0 auto;
+  width:600px;
+  /*height:30px;*/
+}
+input[name="search"]{
+
+  display:block;
+  margin:20px auto 0 auto;
+  padding:7px 30px;
+}
+.search_result{
+  width:800px;
+  height:200px;
+  margin:0 auto;
+  background-color:#C5FFCB;
+}
