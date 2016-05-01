@@ -13,13 +13,15 @@
 <body>
 	<img src="img/google.jpg" alt="google" class="logo">
 	<form action="">
-		<input id="google_input" type="text" name="query">
-		<input type="submit" value="Search" name="search">
+		<input id="search_query" type="text" name="search_query">
+		<input type="submit" id="submit" value="Search" name="search">
 	</form>
 	<script type="text/html" id="results">
-		<% for(var i=0;i<5;++i){%>
+		<% for(var i=0;i<results.length;++i){%>
 		<div class="search_result">
-			<p>Resuly <%=i%></p>
+			<p><a href="<%=decodeURI(results[i].url)%>" class="title"><%=results[i].titleNoFormatting%></a></p>
+			<p class="url"> <%=results[i].url%></p>
+			<p> <%=results[i].content%></p>
 		</div>
 		<% }%>
 	</script>
