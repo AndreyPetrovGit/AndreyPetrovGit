@@ -285,9 +285,9 @@ var data=[  {
     "longitude": 37.385548,
     "_id": "56bdc3396fdbaec5ee4ca929"
   }
-]';
+];
 $(function(){
-	data=JSON.parse(data);
+	// data=JSON.parse(data);
 console.log(_.head(data));
 
 });
