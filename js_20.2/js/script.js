@@ -286,8 +286,7 @@ var data=[  {
     "_id": "56bdc3396fdbaec5ee4ca929"
   }
 ];
-$(function(){
+
 	// data=JSON.parse(data);
 console.log(_.head(data));
 
-});
