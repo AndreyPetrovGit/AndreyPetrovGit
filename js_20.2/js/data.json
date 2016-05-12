@@ -87,15 +87,15 @@
     "address": "680 Pooles Lane, Sattley, Maine, 3025",
     "friends": [
       {
-        "id": 0,
+        "id": "0",
         "name": "Marilyn Mcintosh"
       },
       {
-        "id": 1,
+        "id": "1",
         "name": "Padilla Garrison"
       },
       {
-        "id": 2,
+        "id": "2",
         "name": "Naomi Buckner"
       }
     ],
