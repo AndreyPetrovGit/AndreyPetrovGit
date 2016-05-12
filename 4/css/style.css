@@ -1,0 +1,165 @@
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-family: tahoma;
+}
+
+.background-top{
+	background-image: url("../img/background.png");
+	height:175px;
+}
+.background-bottom{
+	background-image: url("../img/background.png") ;
+	background-position:0 100%;
+	background-size: 100% 122% ;
+
+}
+
+.header{
+	margin:0 auto;
+	position:relative;
+	width:1000px;
+	height: 175px;
+	background-color: white;  
+}
+.wrapper{
+	margin:0 auto;
+	position:relative;
+	width:1000px;
+	background-color:rgba(0,0,0,0);
+}
+.logo{
+	margin:11px 0px 0px 30px;
+	display:block;
+	float:left;
+	z-index:1;
+}
+.contacts{
+	display:block;
+	margin:10px  25px 0px 0px;
+	float:right;
+	font-size:12px;
+	line-height: 18px;
+	font-family:sans-serif;
+	color:#5fa5bb;
+}
+.contacts p:first-of-type{
+	font-weight:600;
+}
+
+.flags{
+	width:360px;
+	height:50px;
+	float:right;
+	padding-top:30px;
+	clear:right;
+}
+.flags a{
+	display:block;
+	float:left;
+	width: 57px;
+	font-size:8px;
+	color:#5fa5bb;
+	text-decoration:underline;
+	font-family: tahoma;
+	position:relative;
+}
+
+.flags span{
+	position:absolute;
+	bottom:-15px;
+	left:5px;
+	text-decoration: underline;
+}
+
+.beach{
+	display:block;
+	margin-top:-3px;
+}
+.main-menu,.sub-menu{
+	background: linear-gradient(#373737, #303030);
+
+}
+.main-menu>li{
+	position: relative;
+	float:left;
+}
+.main-menu a {
+  display: inline-block;  
+  color:#fff;
+  font-size:14px;  
+  text-decoration: none;
+  
+}
+.main-menu img{
+	position:absolute;
+	right:20px;
+	top:15px;
+}
+.main-menu>li>a { 
+ 	padding:7px 35px;
+}
+.main-menu>li:hover .sub-menu {
+	display: block;
+	background-color: #000;
+}
+.main-menu .sub-menu{
+	display: none; 
+	position: absolute; 
+	left: 30px;
+	top: 30px;
+	width: 150px;
+}
+.main-menu .sub-menu a{
+	padding:5px;
+}
+.clierfix::after{
+	content:'';
+	clear:both;
+	display:block;
+}
+.column-wrapper{
+	overflow:hidden;
+	font-family: 'Open Sans', sans-serif; 
+}
+.left-column{
+	padding:2%;
+	width: 18%;
+	background: #edeef0;
+	float: left;
+	border-right:1px solid #bbb;
+}
+.center-column{
+	width: 56%;
+	background: #fff;
+	float: left;
+}
+.right-column{
+	padding:2%;
+	width: 18%;
+	background: #edeef0;
+	float: right;
+	border-left:1px solid #bbb;
+}
+.left-column,
+.center-column,
+.right-column{
+	padding-bottom: 20000px;
+	margin-bottom: -20000px;
+	color:#424c43;
+}
+.column-wrapper h3{
+	margin:-5px 0px 5px 0px;
+	text-align:center;
+	font-size:16px;
+}
+.copyright {
+	padding:0.5% 0px 0px 37%;
+}
+.copyright span{
+
+	color:#fff;
+	font-size:13px;
+
+}

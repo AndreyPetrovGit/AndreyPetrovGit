@@ -1,0 +1,42 @@
+*{
+	margin:0;
+	padding:0;
+
+}
+body{
+	background-color: grey;
+}
+.wrapper{
+	margin:100px auto 0 auto;
+	background-color: #000;
+	width:380px;
+}
+.table{
+	/*border-collapse: collapse;*/
+}
+.table td{
+	border:1px solid #000;
+	color:green;
+	width:50px;
+	height:50px;
+}
+.table tr{
+	
+	width:380px;
+	height:50px;
+}
+.red{
+	background-color:red;
+}
+.yellow{
+	background-color:yellow;
+}
+.blue{
+	background-color:blue;
+}
+.black{
+	background-color:#111;
+}
+.white{
+	background-color:white;
+}
