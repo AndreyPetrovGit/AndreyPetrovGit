@@ -13,7 +13,7 @@ var yourName = prompt("Enter your name: ");
 function nameSearch(name) {
   for (var i = 0; i < nameList.length; ++i) {
     if (nameList[i] === name) {
-     return "Your name: " + nameList[i]
+     return "Your name: " + nameList[i];
     }
   }
   return false;
