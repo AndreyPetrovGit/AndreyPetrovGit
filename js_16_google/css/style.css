@@ -20,7 +20,7 @@ input[name="search"]{
 .search_result{
   width:800px;
   height:200px;
-  margin:300px auto;
+  margin:0 auto;
  
 }
 .url{

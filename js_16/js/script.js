@@ -1,19 +1,33 @@
-function GoogleCallback(jqueryObj,data){
-    var template=$('#results').html();
-	template=_.template(template);
-	template=template(data);
-	$('.search_result').detach();
-	$('body').append(template);
 
-}
 $(function(){
-	$('#submit').click(function(e){
-		        e.preventDefault();
-				var search_query=$('#search_query').val();
-				$.ajax({
-				        type: 'GET',
-				        url:'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&rsz=large&q=' + search_query + '&callback=GoogleCallback&context=?',
-				        dataType: 'jsonp'
-				    });			 
-	}); 
+	
+
+var API_KEY = '2612184-7d3c53808f49251d4c3b415f2';
+
+$('#submit').click(function(e)
+{
+	e.preventDefault();
+	var search_query=$('#search_query').val();
+	var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(search_query);
+
+	$.getJSON(URL, function(data)
+	{
+	    if (parseInt(data.totalHits) > 0)
+	    {
+		      //data.hits[0].pageURL
+		      console.log(data);
+		    var template=$('#results').html();
+			template=_.template(template);
+			template=template({data:data});
+			$('.search_result').detach();
+			$('body').append(template);
+	    }
+	    else
+	        console.log('No hits');
+	});
+}); 
+
+
+
+
 });
