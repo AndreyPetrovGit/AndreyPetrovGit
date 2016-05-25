@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+@media (max-width: 320px) {
+  .header {
+    width: 320px;
+    height: 540px;
+    background-image: url(../img/Mobile_people.jpg);
+    background-size: 320px auto;
+    background-position: center 0;
+    background-repeat: no-repeat; } }
+
+/*# sourceMappingURL=main.css.map */

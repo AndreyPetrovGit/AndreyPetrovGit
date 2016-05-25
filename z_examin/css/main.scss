@@ -1,0 +1,62 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin placeholderColor($color){
+::-webkit-input-placeholder {color:$color;}
+::-moz-placeholder          {color:$color;}
+:-moz-placeholder           {color:$color;}
+:-ms-input-placeholder      {color:$color;}
+}
+
+
+*{
+	margin:0px;
+	padding:0px; 
+}
+@media(max-width: 1440px) and (min-width: 769px)
+{
+
+
+}
+ 
+@media(max-width: 320px)
+{
+	
+	.header
+	{
+		width:320px;
+
+		height:540px;
+
+		background-image:url(../img/Mobile_people.jpg);	
+		background-size:320px auto;
+		 background-position:center 0;
+		 background-repeat:no-repeat;
+
+	}
+
+
+
+
+
+
+
+
+
+
+}
+@media(max-width: 768px) and (min-width: 321px)
+{
+
+
+
+
+
+} 
