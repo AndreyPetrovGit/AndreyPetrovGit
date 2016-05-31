@@ -339,7 +339,7 @@
 	    	color:$darkGgrey;
 	    	text-align:center;
 		}
-		#container
+		/*#container
 		{
 			background-color:black;
 			width:100%;
@@ -349,13 +349,23 @@
 			{	
 				
 				margin:10px;
-				background-color:yellow;
-			
-				height:100px;
-			}
-			.item { width: 25%; }
-           
-		}
+			   width: 100px;
+			    .item__text
+	           {
+	           		color:white;
+	           		position:absolute;
+	           		display:block;
+	           		top:50%;
+	           		left:50%;
+
+	           }
+	           .item__photo
+	           {
+	           	  width:100px;
+                  height:100px;
+	           }
+			}  
+		}*/
 		.main__text
 		{
 			font-family:'Roboto';

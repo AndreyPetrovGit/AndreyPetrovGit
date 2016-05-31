@@ -170,14 +170,18 @@
 			Discover holiday activity 
 			ideas
 		</h3>
-		<div id="container">
+		<div class="masonry" >
 	
 		</div>
-		<script type="text/html" id="results">
-			<% for(var i=0;i<7;++i){%>
+		<script type="text/html"  id="results">
+			<% for(var i=0;i<15;++i){%>
 			
-			<img class="item" src="<%=data.hits[i].webformatURL%>" alt="">
-				
+
+	
+				<!-- <span class="item__text">content</span> -->
+				<img class="item item__photo" src="<%=data.hits[i].webformatURL%>" alt="photo">
+	
+		
 			
 			<% }%>
      	</script> 

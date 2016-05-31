@@ -31,9 +31,10 @@ function search(){
 			    var template=$('#results').html();
 				template=_.template(template);
 				template=template({data:data});
-				$('#container .item').detach();
-				$('#container').append(template);
-				masonryCreation();
+				$('.masonry .item').detach();
+				$('.masonry').append(template);
+				setTimeout(masonryCreation(),100);
+				masonryCreation()
 		    }
 		    else
 		        console.log('No hits');
@@ -42,9 +43,10 @@ function search(){
 
 }
 function masonryCreation(){
-	var $container = $('#container');
+	var $container = $('.masonry');
 	 $container.imagesLoaded( function()
 	 {
 	 	$container.masonry({ columnWidth: 100, itemSelector: '.item'});
 	 });
+
 }
