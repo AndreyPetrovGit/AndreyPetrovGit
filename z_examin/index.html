@@ -3,19 +3,208 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--  for testing -->
+    <meta name=viewport content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+	<script src="js/jquery.carousel.js"></script>
+	<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
 <body>
 	<div class="header">
+		<div class="header__buttonBox">
+			<button class="header__button--transparent">Log in</button>
+			<button class="header__button--transparent--border">Sign up</button>	
+		</div>
+		<!-- <img  class="header__name" src="img/URLAUBSGLUCK_WHITE.png" alt="logo"> -->
+		<!-- &#220; -->
+		<span class="header__name">URLAUBSGL&#220;CK</span>
+		<span class="header__slogan">SHARE YOUR</span>
+		<span class="header__slogan">HOLIDAY DREAMS</span>
+
+		<p class="header__description">
+			And find the perfect partner
+ 		</p>
+ 		<p class="header__description">
+			to filfull it
+ 		</p>
 		
+		<button class="header__action" >Find your holiday partner</button>
 	</div>
 	<div class="main">
+		<p class="main__description">
+			How Urlaubsgl&#252;ck works?
+		</p>
 		
-	</div>
-	<div class="footer">	
+		<div class="carousel"> 
+		<div class="carousel__font">
+			<button class="carousel__button">STEP 1</button>
+			<h3 class="carousel__header">Sed leo enim,</h3>
+			<h3 class="carousel__header">condimentum</h3>
+			<p class="carousel__text">
+				Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+			</p>
+		</div>
+	      <div class="carousel-button-left"><a href="#"></a></div> 
+	      <div class="carousel-button-right"><a href="#"></a></div> 
+		    <div class="carousel-wrapper"> 
+		       <div class="carousel-items">                                                 
+		          <div class="carousel-block"><img src="img/Mobile_hands.jpg" alt="Mobile_hands" /></div>
+		          <div class="carousel-block"><img src="img/Mobile_car.jpg" alt="Mobile_car" /></div>
+		          <div class="carousel-block"><img src="img/Mobile_foots.jpg" alt="Mobile_foots" /></div>         		          
+		       </div>
+	    	</div>
+  		</div>
 
+  		<div class="carousel"> 
+  		<div class="carousel__font">
+			<button class="carousel__button">STEP 2</button>
+			<h3 class="carousel__header">Mordi velit risus</h3>
+			<p class="carousel__text">
+				Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.			</p>
+		</div>
+	      <div class="carousel-button-left"><a href="#"></a></div> 
+	      <div class="carousel-button-right"><a href="#"></a></div> 
+		    <div class="carousel-wrapper"> 
+		       <div class="carousel-items">                                                 
+		          <div class="carousel-block"><img src="img/Mobile_car.jpg" alt="Mobile_car" /></div>
+		          <div class="carousel-block"><img src="img/Mobile_hands.jpg" alt="Mobile_hands" /></div>
+		          <div class="carousel-block"><img src="img/Mobile_foots.jpg" alt="Mobile_foots" /></div>         		          
+		       </div>
+	    	</div>
+  		</div>
+  		<div class="carousel"> 
+  		<div class="carousel__font">
+			<button class="carousel__button">STEP 3</button>
+			<h3 class="carousel__header">Sed leo enim,</h3>
+			<h3 class="carousel__header">condimentum</h3>
+			<p class="carousel__text">
+				Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+			</p>
+		</div>
+	      <div class="carousel-button-left"><a href="#"></a></div> 
+	      <div class="carousel-button-right"><a href="#"></a></div> 
+		    <div class="carousel-wrapper"> 
+		       <div class="carousel-items">                                                 
+		          <div class="carousel-block"><img src="img/Mobile_foots.jpg" alt="Mobile_foots" /></div>         		          
+		          <div class="carousel-block"><img src="img/Mobile_hands.jpg" alt="Mobile_hands" /></div>
+		          <div class="carousel-block"><img src="img/Mobile_car.jpg" alt="Mobile_car" /></div>
+		       </div>
+	    	</div>
+  		</div>
+  		<p class="main__text-center">
+  			Meet a partner for your best holiday
+  		</p>
+  		<!-- 1 -->
+		<div class="personBlock">
+			<div class="personBlock__photo">
+				<div class="personBlock__background">
+					
+				</div>
+				<img class="personBlock__icon" src="img/face1-logo.png" alt="">
+			</div>
+			<h5 class="personBlock__header">
+				Bradly Hunter
+			</h5>
+			<p class="personBlock__description">
+				Based in Chicago. I love playing 
+				tennis and loud music.
+			</p>
+		</div>
+		<!-- 2 -->
+		<div class="personBlock">
+			<div class="personBlock__photo">
+				<div class="personBlock__background">
+					
+				</div>
+				<img class="personBlock__icon" src="img/face3-logo.png" alt="">
+			</div>
+			<h5 class="personBlock__header">
+				Lucas Marsha
+			</h5>
+			<p class="personBlock__description">
+				I get my inspiration from nature
+				and objects around me. I have a
+				 passion to colours, typographt and
+				  skateboards.
+			</p>
+		</div>
+		<!-- 3 -->
+		<div class="personBlock">
+			<div class="personBlock__photo">
+				<div class="personBlock__background">
+					
+				</div>
+				<img class="personBlock__icon" src="img/face2-logo.png" alt="">
+			</div>
+			<h5 class="personBlock__header">
+				Heather Walker
+			</h5>
+			<p class="personBlock__description">
+				I'm a happy person that loves cats 
+				and climbing on mountains.
+			</p>
+		</div>
+		<!-- 4 -->
+		<div class="personBlock">
+			<div class="personBlock__photo">
+				<div class="personBlock__background">
+					
+				</div>
+				<img class="personBlock__icon" src="img/face4-logo.png" alt="">
+			</div>
+			<h5 class="personBlock__header">
+				Bradly Hunter
+			</h5>
+			<p class="personBlock__description">
+				Based in Chicago. I love playing 
+				tennis and loud music.
+			</p>
+		</div>
+		<button class="main__button_transparent">
+			See other partners
+		</button>
+		<h3 class="main__header">
+			Discover holiday activity 
+			ideas
+		</h3>
+		<div id="container">
+	
+		</div>
+		<script type="text/html" id="results">
+			<% for(var i=0;i<7;++i){%>
+			
+			<img class="item" src="<%=data.hits[i].webformatURL%>" alt="">
+				
+			
+			<% }%>
+     	</script> 
+		<h3 class="main__header">
+			Discover holidy activity 
+			ideas
+		</h3>
+		<p class="main__text">
+			Hi! What are your holiday interests?
+		</p>
+		<input id="search_query" class="main__input" type="text" placeholder="Enter your interests">
+			
+		<button class="main__action" id="submit">Search partners</button>
+	</div>
+	<div class="footer">
+		<div class="footer__line"></div>
+		<p class="footer__name">URLAUBSGL&#220;CK</p>
+		<p class="footer__text">Company</p>
+		<ul class="footer__menu">
+			<li class="footer__item"><a class="footer__link" href="#">About</a></li>
+			<li class="footer__item"><a class="footer__link" href="#">Contacts</a></li>
+			<li class="footer__item"><a class="footer__link" href="#">Press</a></li>
+			<li class="footer__item"><a class="footer__link" href="#">Blog</a></li>
+		</ul>	
+		<p class="footer__text">Partners</p>
+		<p class="footer__text">DESIGNED BY</p>
+		<img class="footer__logo" src="img/logo.png" alt="logo">
 	</div>
 </body>
 </html>

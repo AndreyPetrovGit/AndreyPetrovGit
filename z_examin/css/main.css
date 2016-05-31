@@ -7,8 +7,390 @@
     width: 320px;
     height: 540px;
     background-image: url(../img/Mobile_people.jpg);
-    background-size: 320px auto;
     background-position: center 0;
     background-repeat: no-repeat; } }
+.header .header__buttonBox {
+  margin: 0 auto;
+  width: 160px; }
+  .header .header__buttonBox .header__button--transparent, .header .header__buttonBox .header__button--transparent--border {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'montserrat'; }
+  .header .header__buttonBox .header__button--transparent--border {
+    border: 2px solid #fff;
+    border-radius: 25px; }
+.header .header__name {
+  color: #fff;
+  display: block;
+  margin: 110px auto 0 auto;
+  width: 180px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'montserrat';
+  font-size: 20px; }
+.header .header__slogan {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'montserrat';
+  color: #fff; }
+.header .header__slogan:nth-of-type(2) {
+  margin: 25px auto 0 auto;
+  width: 210px; }
+.header .header__slogan:nth-of-type(3) {
+  margin: 3px auto 0 auto;
+  width: 280px; }
+.header .header__description {
+  display: block;
+  color: #fff;
+  font-family: 'Roboto';
+  letter-spacing: 1px;
+  font-weight: 100; }
+.header .header__description:nth-of-type(1) {
+  width: 220px;
+  margin: 8px auto 0 auto; }
+.header .header__description:nth-of-type(2) {
+  width: 80px;
+  margin: 0 auto 0 auto; }
+.header .header__action {
+  display: block;
+  margin: 16px auto 0 auto;
+  padding: 10px 50px;
+  width: 280px;
+  color: #fff;
+  background-color: #ff4e50;
+  border-radius: 20px;
+  border: none;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 15px; }
+
+.main {
+  /********** CAROUSEL *********/
+  /*********** CAROUSEL_END ***********/ }
+  .main .main__description {
+    width: 285px;
+    margin: 35px auto 15px auto;
+    font-family: 'montserrat';
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #333333; }
+  .main .carousel {
+    margin: 10px auto;
+    width: 300px;
+    position: relative; }
+    .main .carousel .carousel__font {
+      margin: 70px 0 0 20px;
+      position: absolute;
+      z-index: 9; }
+      .main .carousel .carousel__font .carousel__button {
+        margin-bottom: 10px;
+        padding: 3px 10px;
+        color: #fff;
+        background-color: #ff4e50;
+        border-radius: 20px;
+        font-family: 'Roboto';
+        font-size: 10px;
+        border: none;
+        letter-spacing: 2px; }
+      .main .carousel .carousel__font .carousel__header {
+        color: #fff;
+        font-family: 'Roboto';
+        font-size: 24px;
+        letter-spacing: 1px; }
+      .main .carousel .carousel__font .carousel__text {
+        font-family: 'Roboto';
+        color: #c6c6c6;
+        font-size: 14px; }
+    .main .carousel .carousel-wrapper {
+      overflow: hidden;
+      position: relative; }
+      .main .carousel .carousel-wrapper .carousel-items {
+        width: 10000px;
+        position: relative; }
+        .main .carousel .carousel-wrapper .carousel-items .carousel-block {
+          float: left;
+          width: 300px;
+          /* padding: 0px 25px 0px 25px;*/ }
+          .main .carousel .carousel-wrapper .carousel-items .carousel-block img {
+            display: block; }
+    .main .carousel .carousel-button-left a, .main .carousel .carousel-button-right a {
+      width: 0px;
+      height: 0px;
+      position: relative;
+      top: 80px;
+      cursor: pointer;
+      text-decoration: none; }
+    .main .carousel .carousel-button-left a {
+      float: left; }
+    .main .carousel .carousel-button-right a {
+      float: right; }
+    .main .carousel .carousel-button-left a::after {
+      content: '';
+      width: 30px;
+      height: 55px;
+      display: block;
+      position: absolute;
+      left: 50px;
+      z-index: 10;
+      background: url(../img/arrow.png); }
+    .main .carousel .carousel-button-right a::after {
+      content: '';
+      width: 30px;
+      height: 55px;
+      display: block;
+      position: absolute;
+      right: 50px;
+      z-index: 10;
+      background: url(../img/arrow2.png); }
+  .main .main__text-center {
+    color: #333333;
+    font-family: 'montserrat';
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+    margin: 5px; }
+  .main .personBlock .personBlock__photo {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative; }
+    .main .personBlock .personBlock__photo .personBlock__background {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      background-position: 50% 50%;
+      z-index: 11;
+      border-radius: 50%;
+      bottom: 0px;
+      right: 0px; }
+    .main .personBlock .personBlock__photo .personBlock__icon {
+      position: absolute;
+      background-position: 50% 50%;
+      width: 17px;
+      height: 17px;
+      bottom: 12px;
+      right: 12px;
+      z-index: 12;
+      background-repeat: no-repeat; }
+  .main .personBlock .personBlock__header {
+    color: #333333;
+    font-family: 'montserrat';
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin: 5px; }
+  .main .personBlock .personBlock__description {
+    color: #666666;
+    font-family: 'Roboto';
+    font-weight: 100;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin: 0px 43px; }
+  .main .personBlock:nth-of-type(4) .personBlock__photo {
+    background-image: url("../img/face-1.jpg"); }
+    .main .personBlock:nth-of-type(4) .personBlock__photo .personBlock__background {
+      background-image: url("../img/face1-background.png"); }
+  .main .personBlock:nth-of-type(6) .personBlock__photo {
+    background-image: url("../img/face-2.jpg"); }
+    .main .personBlock:nth-of-type(6) .personBlock__photo .personBlock__background {
+      background-image: url("../img/face3-background.png"); }
+  .main .personBlock:nth-of-type(5) .personBlock__photo {
+    background-image: url("../img/face-3.jpg"); }
+    .main .personBlock:nth-of-type(5) .personBlock__photo .personBlock__background {
+      background-image: url("../img/face2-background.png"); }
+  .main .personBlock:nth-of-type(7) .personBlock__photo {
+    background-image: url("../img/face-4.jpg"); }
+    .main .personBlock:nth-of-type(7) .personBlock__photo .personBlock__background {
+      background-image: url("../img/face4-background.png"); }
+  .main .main__button_transparent {
+    display: block;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #ff4e50;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'montserrat';
+    border: 2px solid #ff4e50;
+    border-radius: 15px;
+    width: 280px;
+    margin: 20px auto 0 auto; }
+  .main .main__header {
+    width: 290px;
+    margin: 35px auto 15px auto;
+    font-family: 'montserrat';
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #333333;
+    text-align: center; }
+  .main #container {
+    background-color: black;
+    width: 100%;
+    min-height: 900px; }
+    .main #container .item {
+      margin: 10px;
+      background-color: yellow;
+      height: 100px; }
+    .main #container .item {
+      width: 25%; }
+  .main .main__text {
+    font-family: 'Roboto';
+    font-weight: 100;
+    margin: 0 auto;
+    width: 280px;
+    color: #666666;
+    font-size: 18px; }
+  .main .main__input {
+    display: block;
+    width: 260px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px; }
+  .main .main__action {
+    display: block;
+    margin: 16px auto 0 auto;
+    padding: 10px 50px;
+    width: 280px;
+    color: #fff;
+    background-color: #ff4e50;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 30px; }
+
+.footer .footer__line {
+  background-color: #ff4e50;
+  height: 4px;
+  width: 100%; }
+.footer .footer__name {
+  color: #ff4e50;
+  margin: 20px auto 0 auto;
+  width: 180px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'montserrat';
+  font-size: 16px; }
+.footer .footer__text {
+  color: #333333;
+  font-weight: bold;
+  font-family: 'montserrat';
+  font-size: 14px;
+  margin: 20px auto 0 auto; }
+.footer .footer__text:nth-of-type(2) {
+  width: 70px; }
+.footer .footer__text:nth-of-type(3) {
+  width: 60px;
+  margin: 30px auto 0 auto; }
+.footer .footer__text:nth-of-type(4) {
+  width: 95px;
+  color: #cccccc;
+  font-size: 10px;
+  letter-spacing: 2px; }
+.footer .footer__menu {
+  list-style: none;
+  width: 220px;
+  margin: 0 auto; }
+  .footer .footer__menu .footer__item {
+    float: left; }
+    .footer .footer__menu .footer__item .footer__link {
+      font-family: 'Roboto';
+      font-weight: 100;
+      margin: 6px;
+      color: #cccccc;
+      text-decoration: none;
+      font-size: 14px; }
+.footer .footer__logo {
+  display: block;
+  margin: 10px auto 10px auto; }
+
+/* Generated by Font Squirrel (https://www.fontsquirrel.com) on May 26, 2016 */
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-BlackItalic.ttf");
+  font-weight: Black;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Black.ttf");
+  font-weight: Black;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Italic.ttf");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Italic.ttf");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Light.ttf");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-LightItalic.ttf");
+  font-weight: 100;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Thin.ttf");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-ThinItalic.ttf");
+  font-weight: 200;
+  font-style: italic; }
 
 /*# sourceMappingURL=main.css.map */

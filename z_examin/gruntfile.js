@@ -7,7 +7,8 @@ module.exports = function(grunt) {
      
         dist: 
         {
-          src: ['css/variables.scss','css/mixins.scss','css/reset.scss','css/style_desctop.scss','css/style_mobile.scss','css/style_tablet.scss','css/style_common.scss'],
+          src: ['css/variables.scss','css/mixins.scss','css/reset.scss','css/style_desctop.scss','css/style_mobile.scss',
+          'css/style_tablet.scss','css/style_common.scss','css/fonts.scss'],
           dest: 'css/main.scss'
         }
      },
