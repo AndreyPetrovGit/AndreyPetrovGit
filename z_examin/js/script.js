@@ -34,7 +34,7 @@ function search(){
 				$('.masonry .item').detach();
 				$('.masonry').append(template);
 				setTimeout(masonryCreation(),100);
-				masonryCreation()
+				masonryCreation();
 		    }
 		    else
 		        console.log('No hits');

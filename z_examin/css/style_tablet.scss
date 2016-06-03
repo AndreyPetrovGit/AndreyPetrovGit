@@ -1,6 +1,20 @@
 @media(max-width: 768px) and (min-width: 321px)
 {
+	.header
+	{
+		width:768px;
+		height:700px;
+		background-image:url(../img/Tablet_people.jpg);	
+	}
+	.main
+	{
 
+		.carousel
+		{
+			float:left;
+			 width:236px;
+		}
+	}
 
 
 

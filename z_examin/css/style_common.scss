@@ -1,14 +1,16 @@
 
 .header
-{
+{	
+
+	background-position:center 0;
+	background-repeat:no-repeat;
 	.header__buttonBox
 	{
-		margin:0 auto;
-		width:160px;
+		
+		width:160px;	
 		.header__button--transparent
 		{
-		    margin-top:20px;
-			padding:10px 15px;
+		   
 			background-color:transparent;
 			border:none;
 			color:$headerHutton;
@@ -18,7 +20,7 @@
 		}
 		.header__button--transparent--border
 		{
-			@extend .header__button--transparent;
+		    @extend .header__button--transparent;
 			border:2px solid $headerHutton;
 			border-radius:25px;
 		}		
@@ -27,7 +29,6 @@
 	{
 		color:$headerHutton;
 		display:block;
-		margin:110px auto 0 auto;
 		width:180px;
 		font-weight:bold;
 		letter-spacing:1px;
@@ -36,8 +37,7 @@
 	}
 	.header__slogan
 	{
-		display:block;
-		
+		display:block;	
 		font-size:30px;
 		font-weight:bold;
         font-family:'montserrat';
@@ -100,75 +100,66 @@
 
     }
 
-		/********** CAROUSEL *********/
-	.carousel  {
-	   
-		  margin: 10px auto;
-		  width:300px;
-
-		  position:relative;
-
-
-
-		  .carousel__font
-		{
+	/********** CAROUSEL *********/
+	.carousel 
+	 {
+	 
+	    position:relative;
+	   	.carousel__font
+    	{
 		    margin:70px 0 0 20px;
 			position:absolute;
 			z-index:9;
-			.carousel__button
-			{
-				margin-bottom:10px;
-				padding:3px 10px;
-				color:$headerHutton;       
-	        	background-color:$brightButton;
-	        	border-radius:20px;
-	        	font-family:'Roboto';
-				font-size:10px;
-				border:none;
-				letter-spacing:2px;
+		.carousel__button
+		{
+			margin-bottom:10px;
+			padding:3px 10px;
+			color:$headerHutton;       
+        	background-color:$brightButton;
+        	border-radius:20px;
+        	font-family:'Roboto';
+			font-size:10px;
+			border:none;
+			letter-spacing:2px; 
 
-			}
-			.carousel__header
-			{
-				color:$headerHutton; 
-				font-family:'Roboto';
-				font-size:24px;  
-				letter-spacing:1px;
-			}
-			.carousel__text
-			{
-			    font-family:'Roboto';
-				color:#c6c6c6;   
-				font-size:14px;
-			}
+		}
+		.carousel__header
+		{
+			color:$headerHutton; 
+			font-family:'Roboto';
+			font-size:24px;  
+			letter-spacing:1px;
+		}
+		.carousel__text
+		{
+		    font-family:'Roboto';
+			color:#c6c6c6;   
+			font-size:14px;
+		}
 
 		}
 		.carousel-wrapper 
 		{  
-		   overflow: hidden; 
-		   position:relative;
+		    overflow: hidden; 
+		    position:relative;
 			.carousel-items 
 			{
-				   width: 10000px; 
-				   position: relative; 
-				   	.carousel-block 
-				   	{
-					   float: left; 
-					   width: 300px;
-					  /* padding: 0px 25px 0px 25px;*/ 
-					    img
-					    {
-					 	    display:block;
-					    }
-					}
+			   width: 10000px; 
+			   position: relative; 
+			   	.carousel-block 
+			   	{
+				   float: left; 
+				   width: 300px;
+				    img
+				    {
+				 	    display:block;
+				    }
+				}
 			}
 		}
-		
-
-		
-
-
-		.carousel-button-left a, .carousel-button-right a{
+		.carousel-button-left a,
+		.carousel-button-right a
+		{
 		   width: 0px; 
 		   height: 0px; 
 		   position: relative;
@@ -176,11 +167,12 @@
 		   cursor: pointer; 
 		   text-decoration:none;
 		}
-		.carousel-button-left a{
+		.carousel-button-left a
+		{
 		   float: left; 
-		  
 		}
-		.carousel-button-right a{
+		.carousel-button-right a
+		{
 		   float: right;
 		}
 		.carousel-button-left a::after
@@ -207,7 +199,8 @@
 		}
 	}
 
-	/*********** CAROUSEL_END ***********/
+    /*********** CAROUSEL_END ***********/
+    
 	.main__text-center
 	{
 		color:$darkGgrey; 

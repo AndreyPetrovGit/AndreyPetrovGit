@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=viewport content="width=device-width, initial-scale=1">  <!-- device-width -->
 	<link rel="stylesheet" href="css/main.css">
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
@@ -174,12 +174,17 @@
 	
 		</div>
 		<script type="text/html"  id="results">
-			<% for(var i=0;i<15;++i){%>
+			<% for(var i=0;i<13;++i){%>
 			
 
 	
-				<!-- <span class="item__text">content</span> -->
-				<img class="item item__photo" src="<%=data.hits[i].webformatURL%>" alt="photo">
+				
+				<div class="item ">
+					<span class="item__text">content</span>
+					<img  src="<%=data.hits[i].webformatURL%>" alt="photo">
+				</div>
+				
+				
 	
 		
 			
