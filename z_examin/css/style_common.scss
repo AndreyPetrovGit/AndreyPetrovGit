@@ -1,13 +1,20 @@
-
+.clierfix::after{
+	content:'';
+	clear:both;
+	display:block;
+}
 .header
 {	
 
 	background-position:center 0;
 	background-repeat:no-repeat;
+	margin:0 auto;
+	
 	.header__buttonBox
 	{
 		
 		width:160px;	
+
 		.header__button--transparent
 		{
 		   
@@ -35,6 +42,21 @@
         font-family:'montserrat';
         font-size:20px;
 	}
+	.header__textBox
+	{
+		margin:0 auto 0 auto;
+		padding-top:225px;
+		.header__slogan:nth-of-type(1)
+		{
+			margin:25px auto 0 auto;
+			width:210px;
+		}
+		.header__slogan:nth-of-type(2)
+		{
+			margin:3px auto 0 auto;
+			width:280px;
+		}
+	}
 	.header__slogan
 	{
 		display:block;	
@@ -44,16 +66,7 @@
     	color:$headerHutton;
 
 	}
-	.header__slogan:nth-of-type(2)
-	{
-		margin:25px auto 0 auto;
-		width:210px;
-	}
-	.header__slogan:nth-of-type(3)
-	{
-		margin:3px auto 0 auto;
-		width:280px;
-	}
+
 	.header__description
 	{	
 		display:block;
@@ -62,11 +75,8 @@
 		letter-spacing:1px;
 		font-weight:100;
 	}
-	.header__description:nth-of-type(1){
-		width:220px;
-		margin:8px auto 0 auto;
-	}
-		.header__description:nth-of-type(2){
+	
+	.header__description:nth-of-type(2){
 		width:80px;
 		margin:0 auto 0 auto;
 	}
@@ -88,6 +98,7 @@
 }
 .main
 {
+	margin:0 auto;
     .main__description
     {
     	width:285px;
@@ -101,103 +112,106 @@
     }
 
 	/********** CAROUSEL *********/
-	.carousel 
-	 {
-	 
-	    position:relative;
-	   	.carousel__font
-    	{
-		    margin:70px 0 0 20px;
-			position:absolute;
-			z-index:9;
-		.carousel__button
+	.carousel__container
+	{
+		.carousel 
 		{
-			margin-bottom:10px;
-			padding:3px 10px;
-			color:$headerHutton;       
-        	background-color:$brightButton;
-        	border-radius:20px;
-        	font-family:'Roboto';
-			font-size:10px;
-			border:none;
-			letter-spacing:2px; 
+			 
+			    position:relative;
+			   	.carousel__font
+		    	{
+				    margin:70px 0 0 20px;
+					position:absolute;
+					z-index:9;
+				.carousel__button
+				{
+					margin-bottom:10px;
+					padding:3px 10px;
+					color:$headerHutton;       
+		        	background-color:$brightButton;
+		        	border-radius:20px;
+		        	font-family:'Roboto';
+					font-size:10px;
+					border:none;
+					letter-spacing:2px; 
 
-		}
-		.carousel__header
-		{
-			color:$headerHutton; 
-			font-family:'Roboto';
-			font-size:24px;  
-			letter-spacing:1px;
-		}
-		.carousel__text
-		{
-		    font-family:'Roboto';
-			color:#c6c6c6;   
-			font-size:14px;
-		}
-
-		}
-		.carousel-wrapper 
-		{  
-		    overflow: hidden; 
-		    position:relative;
-			.carousel-items 
-			{
-			   width: 10000px; 
-			   position: relative; 
-			   	.carousel-block 
-			   	{
-				   float: left; 
-				   width: 300px;
-				    img
-				    {
-				 	    display:block;
-				    }
 				}
-			}
-		}
-		.carousel-button-left a,
-		.carousel-button-right a
-		{
-		   width: 0px; 
-		   height: 0px; 
-		   position: relative;
-		   top: 80px; 
-		   cursor: pointer; 
-		   text-decoration:none;
-		}
-		.carousel-button-left a
-		{
-		   float: left; 
-		}
-		.carousel-button-right a
-		{
-		   float: right;
-		}
-		.carousel-button-left a::after
-		{
-			content:'';
-			width: 30px; 
-			height: 55px; 
-			display:block;
-			position:absolute;
-			left:50px;
-			z-index:10;
-			background: url(../img/arrow.png); 
-		}
-		.carousel-button-right a::after
-		{
-			content:'';
-			width: 30px; 
-			height: 55px; 
-			display:block;
-			position:absolute;
-			right:50px;
-			z-index:10;
-			background: url(../img/arrow2.png); 
+				.carousel__header
+				{
+					color:$headerHutton; 
+					font-family:'Roboto';
+					font-size:24px;  
+					letter-spacing:1px;
+				}
+				.carousel__text
+				{
+				    font-family:'Roboto';
+					color:#c6c6c6;   
+					font-size:14px;
+
+				}
+
+				}
+				.carousel-wrapper 
+				{  
+				    overflow: hidden; 
+				    position:relative;
+					.carousel-items 
+					{
+					   width: 100000px; 
+					   position: relative; 
+					   	.carousel-block 
+					   	{
+						   float: left; 
+						   
+						  	
+						}
+					}
+
+				}
+				.carousel-button-left a,
+				.carousel-button-right a
+				{
+				   width: 0px; 
+				   height: 0px; 
+				   position: relative;
+				   top: 80px; 
+				   cursor: pointer; 
+				   text-decoration:none;
+				}
+				.carousel-button-left a
+				{
+				   float: left; 
+				}
+				.carousel-button-right a
+				{
+				   float: right;
+				}
+				.carousel-button-left a::after
+				{
+					content:'';
+					width: 30px; 
+					height: 55px; 
+					display:block;
+					position:absolute;
+					left:50px;
+					z-index:10;
+					background: url(../img/arrow.png); 
+				}
+				.carousel-button-right a::after
+				{
+					content:'';
+					width: 30px; 
+					height: 55px; 
+					display:block;
+					position:absolute;
+					right:50px;
+					z-index:10;
+					background: url(../img/arrow2.png); 
+				}
 		}
 	}
+	
 
     /*********** CAROUSEL_END ***********/
     
@@ -208,66 +222,73 @@
 		font-weight:bold;
 		text-align:center;
 		font-size:22px;
-		margin:5px;
+		margin-bottom:15px;
 	}
-	.personBlock
+	.personBlock__container
 	{
-		.personBlock__photo
-		{
-			width:125px;
-			height:125px;
-			border-radius:50%;
-			margin:0 auto;
-			position:relative;
-			.personBlock__background
+		
+		margin:0 auto;
+		.personBlock
+		{	
+			margin:0 1%;
+			.personBlock__photo
 			{
-				width:40px;
-				height:40px;
-				position:absolute;
-				background-position:50% 50%;
-				z-index:11;
+				width:125px;
+				height:125px;
 				border-radius:50%;
-				bottom:0px;
-				right:0px;
-			}
-			.personBlock__icon
-			{
-			    position:absolute;
-				background-position:50% 50%;
-				width:17px;
-				height:17px;
-				bottom:12px;
-				right:12px;
-				z-index:12;
-				background-repeat:no-repeat;
+				margin:0 auto;
 
+				position:relative;
+				.personBlock__background
+				{
+					width:40px;
+					height:40px;
+					position:absolute;
+					background-position:50% 50%;
+					z-index:11;
+					border-radius:50%;
+					bottom:0px;
+					right:0px;
+				}
+				.personBlock__icon
+				{
+				    position:absolute;
+					background-position:50% 50%;
+					width:17px;
+					height:17px;
+					bottom:12px;
+					right:12px;
+					z-index:12;
+					background-repeat:no-repeat;
+
+				}
 			}
+			.personBlock__header
+			{
+				color:$darkGgrey; 
+				font-family:'montserrat';
+				font-weight:bold;
+				text-align:center;
+				font-size:14px;
+				letter-spacing:0.5px;
+				margin:5px;
+			}
+			.personBlock__description
+			{
+				color:$grey; 
+				font-family:'Roboto';
+				font-weight:100;
+				text-align:center;
+				font-size:14px;
+				letter-spacing:0.5px;
+				//margin:0px 43px;
+			}
+			
+			
 		}
-		.personBlock__header
-		{
-			color:$darkGgrey; 
-			font-family:'montserrat';
-			font-weight:bold;
-			text-align:center;
-			font-size:14px;
-			letter-spacing:0.5px;
-			margin:5px;
-		}
-		.personBlock__description
-		{
-			color:$grey; 
-			font-family:'Roboto';
-			font-weight:100;
-			text-align:center;
-			font-size:14px;
-			letter-spacing:0.5px;
-			margin:0px 43px;
-		}
-		
-		
 	}
 
-	    .personBlock:nth-of-type(4) .personBlock__photo
+	    .personBlock:nth-of-type(1) .personBlock__photo
 		{
 			background-image:url('../img/face-1.jpg');
 			.personBlock__background
@@ -276,7 +297,16 @@
 			}
 		
 		}
-		 .personBlock:nth-of-type(6) .personBlock__photo
+			 .personBlock:nth-of-type(2) .personBlock__photo
+		{
+			background-image:url('../img/face-3.jpg');
+			.personBlock__background
+			{
+				background-image:url('../img/face2-background.png');
+			}
+		
+		}
+		 .personBlock:nth-of-type(3) .personBlock__photo
 		{
 			background-image:url('../img/face-2.jpg');
 			
@@ -287,16 +317,8 @@
 			}
 		
 		}
-		 .personBlock:nth-of-type(5) .personBlock__photo
-		{
-			background-image:url('../img/face-3.jpg');
-			.personBlock__background
-			{
-				background-image:url('../img/face2-background.png');
-			}
-		
-		}
-		 .personBlock:nth-of-type(7) .personBlock__photo
+	
+		 .personBlock:nth-of-type(4) .personBlock__photo
 		{
 			background-image:url('../img/face-4.jpg');
 			.personBlock__background
@@ -332,33 +354,8 @@
 	    	color:$darkGgrey;
 	    	text-align:center;
 		}
-		/*#container
-		{
-			background-color:black;
-			width:100%;
-			min-height:900px;
 
-			.item
-			{	
-				
-				margin:10px;
-			   width: 100px;
-			    .item__text
-	           {
-	           		color:white;
-	           		position:absolute;
-	           		display:block;
-	           		top:50%;
-	           		left:50%;
 
-	           }
-	           .item__photo
-	           {
-	           	  width:100px;
-                  height:100px;
-	           }
-			}  
-		}*/
 		.main__text
 		{
 			font-family:'Roboto';
@@ -396,14 +393,15 @@
 		margin-bottom:30px;
 		}
 }
-.footer
-{
-	.footer__line
+.footer__line
 	{
 		background-color:$brightButton;
 		height:4px;
 		width:100%;
 	}
+.footer
+{
+	//margin-left:auto;
 	.footer__name
 	{
 		color:$brightButton;
@@ -414,14 +412,40 @@
         font-family:'montserrat';
         font-size:16px;
 	}
-	.footer__text
+	.footer__list
 	{
-		color:$darkGgrey;
-		font-weight:bold;
-		font-family:'montserrat';
-		font-size:14px;
-		margin: 20px auto 0 auto;
+		
+		.footer__text
+		{
+			color:$darkGgrey;
+			font-weight:bold;
+			font-family:'montserrat';
+			font-size:14px;
+			
 
+
+		}
+		.footer__menu
+		{
+			list-style:none;
+			//min-width:100px;
+			//margin:0 auto;
+			
+
+			.footer__item
+	        {
+	        	
+	        	.footer__link
+	        	{
+	    			font-family:'Roboto';
+					font-weight:100;
+	        		margin:6px;
+	        		color:$lightGrey;
+	        		text-decoration:none;
+	        		font-size:14px;
+	        	}
+	        }
+		}
 
 	}
 	.footer__text:nth-of-type(2)
@@ -441,26 +465,6 @@
 		font-size:10px;
 		letter-spacing:2px;
 	}
-	.footer__menu
-	{
-		list-style:none;
-		width:220px;
-		margin:0 auto;
-
-		.footer__item
-        {
-        	float:left;
-        	.footer__link
-        	{
-    			font-family:'Roboto';
-				font-weight:100;
-        		margin:6px;
-        		color:$lightGrey;
-        		text-decoration:none;
-        		font-size:14px;
-        	}
-        }
-	}
 	.footer__logo
 	{
 		display:block;
@@ -468,3 +472,4 @@
 		margin:10px auto 10px auto;
 	}
 }
+
