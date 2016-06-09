@@ -28,7 +28,7 @@
 		.header__button--transparent--border
 		{
 		    @extend .header__button--transparent;
-			border:2px solid $headerHutton;
+		border:2px solid $headerHutton;
 			border-radius:25px;
 		}		
 	}
@@ -372,7 +372,7 @@
 			width:260px;
 			margin:0 auto;
 			padding:10px;
-			border:1px solid $lightGrey;
+			//border:1px solid $lightGrey;
 			border-radius:5px;
 
 		}
@@ -417,7 +417,7 @@
 		
 		.footer__text
 		{
-			color:$darkGgrey;
+		//	color:$darkGgrey;
 			font-weight:bold;
 			font-family:'montserrat';
 			font-size:14px;
@@ -428,7 +428,7 @@
 		.footer__menu
 		{
 			list-style:none;
-			//min-width:100px;
+		//	min-width:100px;
 			//margin:0 auto;
 			
 

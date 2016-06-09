@@ -571,7 +571,6 @@
     width: 260px;
     margin: 0 auto;
     padding: 10px;
-    border: 1px solid #cccccc;
     border-radius: 5px; }
   .main .main__action {
     display: block;
@@ -601,7 +600,6 @@
   font-family: 'montserrat';
   font-size: 16px; }
 .footer .footer__list .footer__text {
-  color: #333333;
   font-weight: bold;
   font-family: 'montserrat';
   font-size: 14px; }

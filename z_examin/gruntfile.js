@@ -31,7 +31,18 @@ module.exports = function(grunt) {
             src: ['main.scss'],
             dest: 'css',
             ext: '.css'
-          }]
+          },
+          {
+             expand: true,
+              cwd: 'css',
+              src: ['style_ie_8.scss'],
+
+               dest: 'css',
+                ext: '.css'
+          }
+        
+
+          ]
         }
 
 
