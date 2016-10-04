@@ -18,7 +18,11 @@
     position: absolute;
     left: 17%;
     top: 10%; }
-  .header .header__description:nth-of-type(1) {
+  .header .header__slogan {
+    display: block;
+    margin: 0 auto;
+    width: 300px; }
+  .header .header__description {
     width: 310px;
     margin: 8px auto 0 auto; }
 
@@ -76,9 +80,9 @@
         top: 50%;
         left: 50%;
         font-size: 16px; }
-    .main .masonry .item:nth-of-type(5) {
+    .main .masonry .item-5 {
       width: 64%; }
-    .main .masonry .item:nth-of-type(6) {
+    .main .masonry .item-6 {
       width: 64%; }
 
 .footer {

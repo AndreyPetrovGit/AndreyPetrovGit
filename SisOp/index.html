@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SisOp</title>
+	<link rel="stylesheet" href="css/style.css">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+	<script src="js/script.js"></script>
+</head>
+<body>
+<!-- 	<header>
+	
+	
+			
+		<p class="description">
+		</p>
+	</header>
+ -->
+	<div class="wrapper">
+	
+		<img class="logo" src="img/logo.png"  alt="">
+	</div>
+	<footer>
+	</footer>
+
+<script type="text/html" id="Nav">
+
+
+
+	<ul class="nav">
+<h3 class="Main-header">
+				СИСТЕМНАЯ ОПТИМИЗАЦИЯ
+	</h3>
+			<% for(var i=0;i< pages.length;i++){ %>			
+				<li class="nav_item"><%- pages[i].id %>.<%- pages[i].theme %></li> 
+			<% }; %>
+			
+		</ul>
+
+	</script>
+	<script type="text/html" id="Template">
+
+		<div class="imgContainer">
+			<% for(var i=0;i< page.src.length;i++){ %>			
+				<img class="img" src="<%- page.src[i] %>" alt="">
+			<% }; %>
+		</div>
+
+	</script>
+
+</body>
+</html>

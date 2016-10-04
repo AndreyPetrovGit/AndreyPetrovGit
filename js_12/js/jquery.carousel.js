@@ -1,4 +1,3 @@
-
 (function($){
 	
 	$.fn.carousel=function(options){

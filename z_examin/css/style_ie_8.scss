@@ -32,7 +32,13 @@
 			left:17%;
 			top:10%;
 		}
-		.header__description:nth-of-type(1)
+		.header__slogan
+		{
+			display:block;
+			margin:0 auto;
+			width:300px;
+		}
+		.header__description
 		{
 			width:310px; 
 			margin:8px auto 0 auto;
@@ -127,11 +133,11 @@
 				border-radius:10px;
 			} 
 			
-			.item:nth-of-type(5) {
+			.item-5 {
 	          width: 64%;
 			}
 			
-			.item:nth-of-type(6) 
+			.item-6
 		
 	        {
 	      	 	 width: 64%;
