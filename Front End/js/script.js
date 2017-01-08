@@ -2,8 +2,8 @@ $(function(){
 	var label= document.getElementById("status");
 	var password= document.getElementById("password");
 	var login= document.getElementById("login");
-	var request = 'http://localhost:64026/webapi';
-	$("#submit").bind('click',function(event)
+	var request = 'http://www.cyberlms.somee.com/webapi';
+	$("#submit").bind('click', function(event)
 	{
 		
 			event.preventDefault(); 
