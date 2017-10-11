@@ -2,7 +2,7 @@ $(function(){
 	var label= document.getElementById("status");
 	var password= document.getElementById("password");
 	var login= document.getElementById("login");
-	var request = 'http://www.cyberlms.somee.com/webapi';
+	var request = 'cyberlms.somee.com/webapi';
 	$("#submit").bind('click', function(event)
 	{
 		

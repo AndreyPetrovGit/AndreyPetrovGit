@@ -1,0 +1,43 @@
+*{
+padding:0;
+margin:0;
+}
+body{
+background-color: rgba(90,90,180,1); 
+}
+.title-block{
+  margin-top:20px;
+}
+.title{
+  text-align:center;
+    color:white;
+  font-weight: normal;
+  font-family: tahoma;
+  font-size:2em ;
+}
+input[type="text"],input[type="password"]{
+  padding:10px;
+  display:block;
+  margin:10px auto;
+  width:350px;
+  border-radius:2px;
+  border:none;
+}
+form{
+  margin: 100px auto 0px auto;
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px 50px;
+  width:400px;
+  border-radius:2px;
+}
+#submit{
+  display:block;
+  margin:20px auto 0 auto;
+  padding:7px 30px;
+  width:350px;
+  background-color:green;
+  border-radius:2px;
+  border:none;
+  color:white;
+  font-weight: 900;
+}

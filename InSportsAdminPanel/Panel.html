@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>InSports Admin</title>
+	<link rel="stylesheet" href="css/style.css">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+	<script src="js/script.js"></script>
+</head>
+<body>
+
+	<div class="wrapper">
+	</div>
+	<footer>
+	</footer>
+
+	<script type="text/html" id="Nav">
+	<ul class="nav">
+		<h3 class="Main-header">
+
+		</h3>
+		<% for(var i=0;i< pages.length;i++){ %>			
+			<li class="nav_item">
+				<p class="nav_text"><%- pages[i].theme %></p>
+			</li> 
+		<% }; %>
+			
+	</ul>
+
+	</script>
+<!-- <% %> -->
+<!-- 	<script type="text/html" id="OfferTemplate">
+		<p class="imgContainer deletable">Manage panel.</p>
+		<div class="imgContainer deletable">
+			<% 	for(var i=0;i< items.length;i++){ %>			
+				<div class="list_item">
+					<% 	for(var key in items[i]){ %>
+					    <% if(key !== 'people') { %> 
+						 	<p><%- key %> : <%- items[i][key] %></p>
+						<% } else{ %>
+								<p>persons:</p>
+								<% for(var j in items[i][key]){
+									for(var personKey in items[i][key][j]){ %>
+										<p><%- personKey %> : <%- items[i][key][j][personKey] %></p>
+							<%		}
+								}
+							} %>
+					<% }; %>
+				</div>
+			<%  }; %>
+		</div>
+	</script> -->
+
+	<script type="text/html" id="OfferTemplate">
+		<p class="imgContainer deletable OfferTemplateClass">Manage panel.</p>
+		<div class="imgContainer deletable OfferTemplateClass">
+			<% 	for(var i=0;i< items.length;i++){ %>			
+				<div class="list_item">
+					<p>id: <%- items[i].id %></p>
+					<p>name: <%- items[i].name %></p>
+					<p>description: <%- items[i].description %></p>
+					<p>address: <%- items[i].address %></p>
+					<p>latitude: <%- items[i].latitude %></p>
+					<p>longitude: <%- items[i].longitude %></p>
+					<p>sportId: <%- items[i].sportId %></p>
+					<p>sport: <%- items[i].sport %></p>
+					<p>userId: <%- items[i].userId %></p>
+					<p>maxPeople: <%- items[i].maxPeople %></p>
+					<p>distance: <%- items[i].distance %></p>
+					<p>offerDate: <%- items[i].offerDate %></p>
+					<p>complete: <%- items[i].complete %></p>
+					<p>phone: <%- items[i].phone %></p>
+					
+					<% for (var person in items[i].people) { %>
+						<div class="personToggle clearfix">
+							<p class="userText"><%- items[i].people[person].id %></p>
+							<p class="userText"><%- items[i].people[person].name %></p>
+							<p class="userPhotoBlock"><img class="userPhoto" src="<%-items[i].people[person].picture%>"></p>
+							<div class="additionInfo">
+								<a href="https://www.facebook.com/<%-items[i].people[person].userFacebookId%>"><button>Go Facebook</button></a><br>
+								<p>email: <%- items[i].people[person].email %></p>
+								<p>phone: <%- items[i].people[person].phone %></p>
+								<p>birthday: <%- items[i].people[person].birthday %></p>
+								<p>voted: <%- items[i].people[person].voted %></p>
+								<p>isFriend: <%- items[i].people[person].isFriend %></p>
+							</div>
+						</div>
+					<% }; %>
+				</div>
+			<%  }; %>
+		</div>
+	</script>
+
+
+	<script type="text/html" id="PanelUserTemplate">	
+		<div class="imgContainer deletable">
+			<p>Manage panel.<b>Users.</b></p><br>
+			<span>Filter by name:</span><input type="text" name="filter" id="NameFilter"><br>
+		</div>
+	</script>
+	<script type="text/html" id="UserTemplate">	
+		<div class="userList imgContainer deletable">
+			<% 	for(var i=0;i< items.length;i++){ %>			
+				<div class="personToggle clearfix">
+					<p class="userText"><%-items[i].id%></p>
+					<p class="userText"><%-items[i].name%></p>
+					<p class="userPhotoBlock"><img class="userPhoto-big" src="<%-items[i].picture%>"></p>
+					<div class="additionInfo">
+						<a href="https://www.facebook.com/<%-items[i].userFacebookId%>"><button>Go Facebook</button></a><br>
+						<p>email : <%-items[i].email%></p>
+						<p>birthday : <%-items[i].birthday%></p>
+						<p>rank : <%-items[i].rank%></p>
+						<p>phone : <%-items[i].phone%></p>
+						<p>votesNumber : <%-items[i].votesNumber%></p>
+					</div>
+				</div>
+			<%  }; %>
+		</div>
+	</script>
+
+	<script type="text/html" id="SportTemplate">
+		<div class="Container">
+			<% for(var i=0;i< items.length;i++){ %>			
+			<div class="list_item">
+					<p>
+						<%- items[i].id %>
+					</p>
+					<p>
+						<%- items[i].name %>
+					</p>
+					<p>
+						<%- items[i].description %>
+					</p>
+				</div>
+			<% }; %>
+		</div>
+	</script>
+
+	<script type="text/html" id="NewSportTemplate">
+		<div class="Container">
+			<% for(var i=0;i< items.length;i++){ %>			
+				<div class="list_item">
+					<p>
+						<%- items[i].id %>
+					</p>
+					<p>
+						<%- items[i].name %>
+					</p>
+					<p>
+						<%- items[i].description %>
+					</p>
+					<button  class="addToDb" id="<%-items[i].id%>">Accept</button>
+					<button  class="Decline" name="<%-items[i].id%>">Decline</button>
+				</div>
+			<% }; %>
+		</div>
+	</script>
+
+	<script type="text/html" id="BugReportTemplate">
+		<p class="imgContainer deletable">Manage panel.</p>
+		<div class="imgContainer deletable">
+			<% for(var i=0;i< items.length;i++){ %>			
+				<div class="list_item">
+					<p>
+						<%- items[i].id %>
+					</p>
+					<p>
+						<%- items[i].name %>
+					</p>
+					<p>
+						status: <%- items[i].status %>
+					</p>
+				</div>
+			<% }; %>
+		</div>
+	</script>
+
+	<script type="text/html" id="PushTemplate">
+	 	<form name="sendPush" class="sendPush deletable">
+	 		<p><h3>Push message:</h3></p>
+	 		<textarea name="text" style="width:50%" rows="10"></textarea> <br>
+	 		<input type="radio" name="type" value="0">Всем <br>
+	 		<input type="radio" name="type" value="1">Тем кто не заходил 1 месяц <br>
+	 		<input type="radio" name="type" value="3">Тем кто не заходил 3 месяца  <br>
+	 		<input type="radio" name="type" value="6">Тем кто не заходил 6 месяцев <br>
+	 		<input type="submit" value="Send push" class=Submit>
+	 	</form>
+	</script>
+
+</body>
+</html>
