@@ -7,9 +7,6 @@ body{
  background-color: white;
 }
 
-header{
-
-}
 .Main-header{
 	margin-bottom:20px;
 	padding-top:10px;
@@ -68,9 +65,9 @@ header{
 
 }
 .list_item{
-	border:1px solid black;
+	border:2px solid black;
 	border-radius: 2px;
-	margin:5px;
+	margin:15px 5px 5px 5px;
 	background-color:white;
 }
 
@@ -105,8 +102,6 @@ header{
 .personToggle>p  {
 	float:left;
 	vertical-align:middle;
-	/*margin:0 10px 0 5px;*/
-
 	font-size:20px;
 
 }
@@ -147,12 +142,11 @@ header{
 	vertical-align:middle;
 	font-size:20px;
 	margin:0px 10px 0px 10px;
-
 }
 .entryStyle>div {
 	float:left;
 }
-button{
+button, input[type="submit"]{
 	cursor:pointer;
 	color:black;
 	border:none;
@@ -161,6 +155,20 @@ button{
 	padding:5px;
 }
 
+input[type="text"]{
+	margin:10px 0px 0px 20px;
+	color:black;
+	background-color: rgba(180,180,250,1);
+	width:40%;
+	height:30px;
+	padding:5px;
+	border:none;
+	border-radius:5px;
+	box-shadow:0px 0px 2px 2px #444444;
+	font-size: 14px;
+	font-family: tahoma;	
+	font-weight: 100;
+}
 
 .GreenButton{
 	background-color:rgb(34,139,34);
@@ -170,4 +178,39 @@ button{
 }
 .RedButton{
 	background-color: #A51717;
+}
+.Clicable{
+	cursor:pointer;
+}
+
+.list_item-header{
+	border-bottom:2px solid white;
+	background-color: black;
+
+
+}
+.list_item-header>p{
+	float:left;
+	vertical-align:middle;
+	font-size:20px;
+	margin:10px 10px 10px 10px;
+	color: white;
+}
+.list_item-content{
+	margin:10px 10px 0px 10px;
+	/*background-color:rgba(90,90,180,1); */
+	background-color: black;
+}
+.list_item-content-left{
+	float:left;
+	width:50%;
+
+}
+.list_item-content-right{
+	float:right;
+	width:50%;
+}
+.list_item-content-right>p,.list_item-content-left>p{
+	color:white;
+	padding:5px;
 }

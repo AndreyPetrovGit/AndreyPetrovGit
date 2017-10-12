@@ -21,7 +21,7 @@
 
 		</h3>
 		<% for(var i=0;i< pages.length;i++){ %>			
-			<li class="nav_item">
+			<li class="nav_item Clicable">
 				<p class="nav_text"><%- pages[i].theme %></p>
 			</li> 
 		<% }; %>
@@ -32,27 +32,33 @@
 
 
 	<script type="text/html" id="OfferTemplate">
-		<p class="imgContainer deletable OfferTemplateClass">Manage panel.</p>
+		<!-- <p class="imgContainer deletable OfferTemplateClass">Manage panel.</p> -->
 		<div class="imgContainer deletable OfferTemplateClass">
 			<% 	for(var i=0;i< items.length;i++){ %>			
 				<div class="list_item">
-					<p>id: <%- items[i].id %></p>
-					<p>name: <%- items[i].name %></p>
-					<p>description: <%- items[i].description %></p>
-					<p>address: <%- items[i].address %></p>
-					<p>latitude: <%- items[i].latitude %></p>
-					<p>longitude: <%- items[i].longitude %></p>
-					<p>sportId: <%- items[i].sportId %></p>
-					<p>sport: <%- items[i].sport %></p>
-					<p>userId: <%- items[i].userId %></p>
-					<p>maxPeople: <%- items[i].maxPeople %></p>
-					<p>distance: <%- items[i].distance %></p>
-					<p>offerDate: <%- items[i].offerDate %></p>
-					<p>complete: <%- items[i].complete %></p>
-					<p>phone: <%- items[i].phone %></p>
-					
+					<div class="list_item-header clearfix">
+						<p><%- items[i].id %></p>
+						<p><%- items[i].name %></p>
+						<p><%- items[i].sport %> (id:<%-items[i].sportId%>)</p>
+					</div>
+					<div class="list_item-content clearfix">
+						<div class="list_item-content-left">
+							<p>complete: <%- items[i].complete %></p>
+							<p>userId: <%- items[i].userId %></p>
+							<p>phone: <%- items[i].phone %></p>
+							<p>maxPeople: <%- items[i].maxPeople %></p>
+							<p>description: <%- items[i].description %></p>
+						</div>
+						<div class="list_item-content-right">
+							<p>offerDate: <%- items[i].offerDate %></p>
+							<p>address: <%- items[i].address %></p>
+							<p>longitude: <%- items[i].longitude %></p>
+							<p>latitude: <%- items[i].latitude %></p>
+							<p>distance: <%- items[i].distance %></p>
+						</div>
+					</div>
 					<% for (var person in items[i].people) { %>
-						<div class="personToggle clearfix">
+						<div class="personToggle clearfix Clicable">
 							<p class="userText"><%- items[i].people[person].id %></p>
 							<p class="userText"><%- items[i].people[person].name %></p>
 							<p class="userPhotoBlock"><img class="userPhoto" src="<%-items[i].people[person].picture%>"></p>
