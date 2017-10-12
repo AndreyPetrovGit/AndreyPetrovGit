@@ -57,7 +57,7 @@
 							<p class="userText"><%- items[i].people[person].name %></p>
 							<p class="userPhotoBlock"><img class="userPhoto" src="<%-items[i].people[person].picture%>"></p>
 							<div class="additionInfo">
-								<a href="https://www.facebook.com/<%-items[i].people[person].userFacebookId%>"><button>Go Facebook</button></a><br>
+								<a href="https://www.facebook.com/<%-items[i].people[person].userFacebookId%>"><button class="BuleButton">Go Facebook</button></a><br>
 								<p>email: <%- items[i].people[person].email %></p>
 								<p>phone: <%- items[i].people[person].phone %></p>
 								<p>birthday: <%- items[i].people[person].birthday %></p>
@@ -86,7 +86,7 @@
 					<p class="userText"><%-items[i].name%></p>
 					<p class="userPhotoBlock"><img class="userPhoto-big" src="<%-items[i].picture%>"></p>
 					<div class="additionInfo">
-						<a href="https://www.facebook.com/<%-items[i].userFacebookId%>"><button>Go Facebook</button></a><br>
+						<a href="https://www.facebook.com/<%-items[i].userFacebookId%>"><button class="BuleButton">Go Facebook</button></a><br>
 						<p>email : <%-items[i].email%></p>
 						<p>birthday : <%-items[i].birthday%></p>
 						<p>rank : <%-items[i].rank%></p>
@@ -101,7 +101,7 @@
 	<script type="text/html" id="SportTemplate">
 		<div class="Container">
 			<% for(var i=0;i< items.length;i++){ %>			
-			<div class="list_item">
+			<div class="list_item entryStyle clearfix">
 					<p>
 						<%- items[i].id %>
 					</p>
@@ -119,7 +119,7 @@
 	<script type="text/html" id="NewSportTemplate">
 		<div class="Container">
 			<% for(var i=0;i< items.length;i++){ %>			
-				<div class="list_item">
+				<div class="list_item entryStyle clearfix">
 					<p>
 						<%- items[i].id %>
 					</p>
@@ -129,8 +129,8 @@
 					<p>
 						<%- items[i].description %>
 					</p>
-					<button  class="addToDb" id="<%-items[i].id%>">Accept</button>
-					<button  class="Decline" name="<%-items[i].id%>">Decline</button>
+					<button  class="addToDb GreenButton" id="<%-items[i].id%>">Accept</button>
+					<button  class="Decline RedButton" name="<%-items[i].id%>">Decline</button>
 				</div>
 			<% }; %>
 		</div>
@@ -140,16 +140,19 @@
 		<p class="imgContainer deletable">Manage panel.</p>
 		<div class="imgContainer deletable">
 			<% for(var i=0;i< items.length;i++){ %>			
-				<div class="list_item">
+				<div class="list_item entryStyle clearfix">
 					<p>
 						<%- items[i].id %>
 					</p>
 					<p>
 						<%- items[i].name %>
 					</p>
-					<p>
-						status: <%- items[i].status %>
-					</p>
+					<% if(items[i].status === true){ %>
+						<p class="bug-status Actual">Actual</p>
+						<button  class="Complete GreenButton" name="<%-items[i].id%>">Mark as complete</button>
+					<%}else{%>
+						<p class="bug-status Completed">Completed</p>
+					<%};%>
 				</div>
 			<% }; %>
 		</div>

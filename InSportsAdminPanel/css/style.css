@@ -135,3 +135,39 @@ header{
 .additionInfo{
 	margin-left:10px;
 }
+
+.entryStyle{
+	background-color: grey;
+	margin: 10px 0px 10px 10px;
+	padding:10px;
+}
+
+.entryStyle>p  {
+	float:left;
+	vertical-align:middle;
+	font-size:20px;
+	margin:0px 10px 0px 10px;
+
+}
+.entryStyle>div {
+	float:left;
+}
+button{
+	cursor:pointer;
+	color:black;
+	border:none;
+	font-family: tahoma;
+	border-radius: 3px;
+	padding:5px;
+}
+
+
+.GreenButton{
+	background-color:rgb(34,139,34);
+}
+.BuleButton{
+	background-color: #545BBF;
+}
+.RedButton{
+	background-color: #A51717;
+}

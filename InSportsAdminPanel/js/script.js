@@ -133,7 +133,7 @@ $(function(){
 					var sportFilter = document.getElementById('sportFilter');
 					sportFilter.oninput = function(){
 						var filtredArray = newItems.filter(function(el){
-							return el.sport.indexOf(sportFilter.value) != -1;
+							return el.sport.toLowerCase().indexOf(sportFilter.value.toLowerCase()) != -1;
 						});
 						console.log(filtredArray);
 
@@ -171,7 +171,7 @@ $(function(){
 					var nameFilter = document.getElementById('NameFilter');
 					nameFilter.oninput = function(){
 						var filtredArray = items.filter(function(el){
-							return el.name.indexOf(nameFilter.value) != -1;
+							return el.name.toLowerCase().indexOf(nameFilter.value.toLowerCase()) != -1;
 						});
 						$(".userList").remove();
 						infoObject.items = filtredArray;
@@ -238,6 +238,23 @@ $(function(){
 				infoObject.items = items;
 				var result = BugReportTemplateFunction(infoObject);
 				$('.wrapper').append(result);
+
+				$('.Complete').each(function(){
+					var This = $(this);
+					console.log(this);
+					var name = $(this).attr('name');
+					console.log(name);
+					This.on('click', function(){
+						console.log('delete');
+						Get(BaseUrl, "admin/bugs/complete?bugId=" + name).then(function(response){
+							console.log(response);
+						},function(error){
+							console.log(error);
+						});	
+						This.parent().find('bug-status').text('Completed');
+						This.remove();					
+					});
+				});
 				
 			}, function(error){console.log(error);});
 		});
