@@ -189,8 +189,8 @@ $(function(){
 			Get(BaseUrl,"admin/sports/new").then(function(items){
 				infoObject.items = items;
 				var newSportList = NewSportTemplateFunction(infoObject);
-				var col = $(newSportList).prepend("<p>New sports:</p>");
-				$('.NewSportContainer').append(col);
+				var col = $(newSportList);
+				$('.NewSportContainer').prepend("<p>New sports:</p>").append(col);
 				$('.addToDb').each(function(){
 					var This = $(this);
 					console.log(this);
@@ -226,8 +226,8 @@ $(function(){
 			Get(BaseUrl,"sport").then(function(items){
 				infoObject.items = items;
 				var sportList = SportTemplateFunction(infoObject);
-				var col = $(sportList).prepend("<p>Sports:</p>");
-				$('.SportContainer').append(col);
+				var col = $(sportList);
+				$('.SportContainer').prepend("<p>Sports:</p>").append(col);
 			}, function(error){console.log(error);});
 		});
 		$('.nav_item:nth-of-type(4)').on('click',function(){
