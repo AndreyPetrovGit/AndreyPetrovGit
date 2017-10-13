@@ -29,51 +29,6 @@
 	</ul>
 
 	</script>
-
-<!-- 
-	<script type="text/html" id="OfferTemplate">
-		<div class="imgContainer deletable OfferTemplateClass">
-			<% 	for(var i=0;i< items.length;i++){ %>			
-				<div class="list_item">
-					<div class="list_item-header clearfix">
-						<p><%- items[i].id %></p>
-						<p><%- items[i].name %></p>
-						<p><%- items[i].sport %> (id:<%-items[i].sportId%>)</p>
-					</div>
-					<div class="list_item-content clearfix">
-						<div class="list_item-content-left">
-							<p>complete: <%- items[i].complete %></p>
-							<p>userId: <%- items[i].userId %></p>
-							<p>phone: <%- items[i].phone %></p>
-							<p>maxPeople: <%- items[i].maxPeople %></p>
-							<p>description: <%- items[i].description %></p>
-							<p>offerDate: <%- items[i].offerDate %></p>
-							<p>address: <%- items[i].address %></p>
-							<p>longitude: <%- items[i].longitude %></p>
-							<p>latitude: <%- items[i].latitude %></p>
-							<p>distance: <%- items[i].distance %></p>
-						</div>
-					</div>
-					<% for (var person in items[i].people) { %>
-						<div class="personToggle clearfix Clicable">
-							<p class="userText"><%- items[i].people[person].id %></p>
-							<p class="userText"><%- items[i].people[person].name %></p>
-							<p class="userPhotoBlock"><img class="userPhoto" src="<%-items[i].people[person].picture%>"></p>
-							<div class="additionInfo">
-								<a href="https://www.facebook.com/<%-items[i].people[person].userFacebookId%>"><button class="BuleButton">Go Facebook</button></a><br>
-								<p>email: <%- items[i].people[person].email %></p>
-								<p>phone: <%- items[i].people[person].phone %></p>
-								<p>birthday: <%- items[i].people[person].birthday %></p>
-								<p>voted: <%- items[i].people[person].voted %></p>
-								<p>isFriend: <%- items[i].people[person].isFriend %></p>
-							</div>
-						</div>
-					<% }; %>
-				</div>
-			<%  }; %>
-		</div>
-	</script>
- -->
 	<script type="text/html" id="OfferTemplate">
 		<div class="imgContainer deletable OfferTemplateClass">
 			<% 	for(var i=0;i< items.length;i++){ %>			
@@ -91,7 +46,14 @@
 							
 							<% 	for(var key in items[i]){ %>
 								<%if(key !== 'people' && !(key === 'id' || key === 'sportId' || key === 'name' || key === 'sport')){%>
-									<p><%- key %> : <%- items[i][key] %></p>
+									<%if(key === 'offerDate'){%>
+									<!-- день/месяц/год - час:минуты -->
+									 <!-- 2017-10-04T16:51:03.062Z -->
+									 <!-- 0123456789012345678901234 -->
+									 <p><%- key %> : <%-items[i][key][8]%><%-items[i][key][9]%>/<%-items[i][key][5]%><%-items[i][key][6]%>/<%-items[i][key][0]%><%-items[i][key][1]%><%-items[i][key][2]%><%-items[i][key][3]%> - <%-items[i][key][11]%><%-items[i][key][12]%>:<%-items[i][key][14]%><%-items[i][key][15]%></p>
+									<%}else{%>
+										<p><%- key %> : <%- items[i][key] %></p>
+									<%}%>
 								<%}%>
 							<%  }; %>
 						</div>
@@ -137,25 +99,35 @@
 		</div>
 	</script>
 	<script type="text/html" id="UserTemplate">	
-		<div class="userList imgContainer deletable">
-			<% 	for(var i=0;i< items.length;i++){ %>			
-				<div class="personToggle clearfix">
-					<p class="userText"><%-items[i].id%></p>
-					<p class="userText"><%-items[i].name%></p>
-					<p class="userPhotoBlock"><img class="userPhoto-big" src="<%-items[i].picture%>"></p>
-					<div class="additionInfo">
-						<a href="https://www.facebook.com/<%-items[i].userFacebookId%>"><button class="BuleButton">Go Facebook</button></a><br>
-						<p>email : <%-items[i].email%></p>
-						<p>birthday : <%-items[i].birthday%></p>
-						<p>rank : <%-items[i].rank%></p>
-						<p>phone : <%-items[i].phone%></p>
-						<p>votesNumber : <%-items[i].votesNumber%></p>
-					</div>
-				</div>
-			<%  }; %>
-		</div>
-	</script>
+			<div class="userList imgContainer deletable">
+				<% 	for(var i=0;i< items.length;i++){ %>
+					<div class="personToggle clearfix Clicable">
+						<%for(var personKey in items[i]){ %>
+							<%if(personKey === 'id' || personKey === 'name'){%>
+								<p class="userText"><%-items[i][personKey]%></p>
+							<%}%>
+				        <%}%>
+						<%for(var personKey in items[i]){ %>
+							<%if(personKey === 'picture'){%>
+								<p class="userPhotoBlock"><img class="userPhoto" src="<%-items[i][personKey]%>"></p>
+							<%}%>
+				        <%}%>
 
+						<div class="additionInfo">
+							<%for(var personKey in items[i]){ %>
+								<%if(personKey !== 'picture' && !(personKey === 'id' || personKey === 'name')){%>
+									<%if(personKey === 'userFacebookId'){%>
+										<a href="https://www.facebook.com/<%-items[i][personKey]%>"><button class="BuleButton">Go Facebook</button></a><br>
+									<%}else{%>
+										<p><%-personKey%>: <%- items[i][personKey] %></p>
+									<%}%>
+								<%}%>
+					        <%}%>
+						</div>
+					</div>
+				<%  }; %>
+			</div>
+		</script>
 	<script type="text/html" id="SportTemplate">
 		<div class="Container">
 			<% for(var i=0;i< items.length;i++){ %>			
