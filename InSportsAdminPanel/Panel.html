@@ -30,9 +30,8 @@
 
 	</script>
 
-
+<!-- 
 	<script type="text/html" id="OfferTemplate">
-		<!-- <p class="imgContainer deletable OfferTemplateClass">Manage panel.</p> -->
 		<div class="imgContainer deletable OfferTemplateClass">
 			<% 	for(var i=0;i< items.length;i++){ %>			
 				<div class="list_item">
@@ -48,8 +47,6 @@
 							<p>phone: <%- items[i].phone %></p>
 							<p>maxPeople: <%- items[i].maxPeople %></p>
 							<p>description: <%- items[i].description %></p>
-						</div>
-						<div class="list_item-content-right">
 							<p>offerDate: <%- items[i].offerDate %></p>
 							<p>address: <%- items[i].address %></p>
 							<p>longitude: <%- items[i].longitude %></p>
@@ -76,8 +73,63 @@
 			<%  }; %>
 		</div>
 	</script>
+ -->
+	<script type="text/html" id="OfferTemplate">
+		<div class="imgContainer deletable OfferTemplateClass">
+			<% 	for(var i=0;i< items.length;i++){ %>			
+				<div class="list_item">
+					<div class="list_item-header clearfix">
+						<% 	for(var key in items[i]){ %>
+						    <% if(key === 'id' || key === 'sportId' || key === 'name' || key === 'sport') { %> 
+							 	<p><%- key %> : <%- items[i][key] %></p>
+							<% } %>
+						<%  }; %>
+					</div>	
 
+					<div class="list_item-content clearfix">
+						<div class="list_item-content-left">
+							
+							<% 	for(var key in items[i]){ %>
+								<%if(key !== 'people' && !(key === 'id' || key === 'sportId' || key === 'name' || key === 'sport')){%>
+									<p><%- key %> : <%- items[i][key] %></p>
+								<%}%>
+							<%  }; %>
+						</div>
+					</div>	
+					<% 	for(var key in items[i]){ %>
+						<%if(key === 'people'){%>
+							<% for(var j in items[i][key]){%>
+								<div class="personToggle clearfix Clicable">
+									<%for(var personKey in items[i][key][j]){ %>
+										<%if(personKey === 'id' || personKey === 'name'){%>
+											<p class="userText"><%-items[i][key][j][personKey]%></p>
+										<%}%>
+							        <%}%>
+									<%for(var personKey in items[i][key][j]){ %>
+										<%if(personKey === 'picture'){%>
+											<p class="userPhotoBlock"><img class="userPhoto" src="<%-items[i][key][j][personKey]%>"></p>
+										<%}%>
+							        <%}%>
 
+									<div class="additionInfo">
+										<%for(var personKey in items[i][key][j]){ %>
+											<%if(personKey !== 'picture' && !(personKey === 'id' || personKey === 'name')){%>
+												<%if(personKey === 'userFacebookId'){%>
+													<a href="https://www.facebook.com/<%-items[i][key][j][personKey]%>"><button class="BuleButton">Go Facebook</button></a><br>
+												<%}else{%>
+													<p><%-personKey%>: <%- items[i][key][j][personKey] %></p>
+												<%}%>
+											<%}%>
+								        <%}%>
+									</div>
+								</div>
+							<%}%>
+						<%}%>
+					<%}%>
+				</div>
+			<%}; %>
+		</div>
+	</script>
 	<script type="text/html" id="PanelUserTemplate">	
 		<div class="imgContainer deletable">
 			<p>Manage panel.<b>Users.</b></p><br>
