@@ -34,11 +34,9 @@
 			<% 	for(var i=0;i< items.length;i++){ %>			
 				<div class="list_item">
 					<div class="list_item-header clearfix">
-						<% 	for(var key in items[i]){ %>
-						    <% if(key === 'id' || key === 'sportId' || key === 'name' || key === 'sport') { %> 
-							 	<p><%- key %> : <%- items[i][key] %></p>
-							<% } %>
-						<%  }; %>
+						<p><%- items[i].id %></p>
+						<p><%- items[i].name %></p>
+						<p><%- items[i].sport %> (id:<%-items[i].sportId%>)</p>
 					</div>	
 
 					<div class="list_item-content clearfix">
@@ -47,9 +45,6 @@
 							<% 	for(var key in items[i]){ %>
 								<%if(key !== 'people' && !(key === 'id' || key === 'sportId' || key === 'name' || key === 'sport')){%>
 									<%if(key === 'offerDate'){%>
-									<!-- день/месяц/год - час:минуты -->
-									 <!-- 2017-10-04T16:51:03.062Z -->
-									 <!-- 0123456789012345678901234 -->
 									 <p><%- key %> : <%-items[i][key][8]%><%-items[i][key][9]%>/<%-items[i][key][5]%><%-items[i][key][6]%>/<%-items[i][key][0]%><%-items[i][key][1]%><%-items[i][key][2]%><%-items[i][key][3]%> - <%-items[i][key][11]%><%-items[i][key][12]%>:<%-items[i][key][14]%><%-items[i][key][15]%></p>
 									<%}else{%>
 										<p><%- key %> : <%- items[i][key] %></p>
@@ -62,11 +57,10 @@
 						<%if(key === 'people'){%>
 							<% for(var j in items[i][key]){%>
 								<div class="personToggle clearfix Clicable">
-									<%for(var personKey in items[i][key][j]){ %>
-										<%if(personKey === 'id' || personKey === 'name'){%>
-											<p class="userText"><%-items[i][key][j][personKey]%></p>
-										<%}%>
-							        <%}%>
+
+									<p class="userText"><%- items[i][key][j].id %></p>
+									<p class="userText"><%- items[i][key][j].name %></p>
+
 									<%for(var personKey in items[i][key][j]){ %>
 										<%if(personKey === 'picture'){%>
 											<p class="userPhotoBlock"><img class="userPhoto" src="<%-items[i][key][j][personKey]%>"></p>
@@ -102,11 +96,8 @@
 			<div class="userList imgContainer deletable">
 				<% 	for(var i=0;i< items.length;i++){ %>
 					<div class="personToggle clearfix Clicable">
-						<%for(var personKey in items[i]){ %>
-							<%if(personKey === 'id' || personKey === 'name'){%>
-								<p class="userText"><%-items[i][personKey]%></p>
-							<%}%>
-				        <%}%>
+						<p class="userText"><%-items[i].id%></p>
+						<p class="userText"><%-items[i].name%></p>
 						<%for(var personKey in items[i]){ %>
 							<%if(personKey === 'picture'){%>
 								<p class="userPhotoBlock"><img class="userPhoto" src="<%-items[i][personKey]%>"></p>
@@ -128,8 +119,7 @@
 				<%  }; %>
 			</div>
 		</script>
-	<script type="text/html" id="SportTemplate">
-		<div class="Container">
+	<script type="text/html" id="SportTemplate">	
 			<% for(var i=0;i< items.length;i++){ %>			
 			<div class="list_item entryStyle clearfix">
 					<p>
@@ -143,11 +133,9 @@
 					</p>
 				</div>
 			<% }; %>
-		</div>
 	</script>
 
 	<script type="text/html" id="NewSportTemplate">
-		<div class="Container">
 			<% for(var i=0;i< items.length;i++){ %>			
 				<div class="list_item entryStyle clearfix">
 					<p>
@@ -163,7 +151,6 @@
 					<button  class="Decline RedButton" name="<%-items[i].id%>">Decline</button>
 				</div>
 			<% }; %>
-		</div>
 	</script>
 
 	<script type="text/html" id="BugReportTemplate">

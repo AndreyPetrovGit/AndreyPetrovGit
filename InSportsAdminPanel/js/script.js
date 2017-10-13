@@ -185,12 +185,12 @@ $(function(){
 			infoObject.page = pages[2];
 			$('.deletable').remove();
 			$('.wrapper').append('<p class="right80 deletable">Manage panel.</p><div class="imgContainer deletable"></div>');
-
+			$('.imgContainer').append('<div class="Container NewSportContainer"></div><div class="Container SportContainer"></div>');
 			Get(BaseUrl,"admin/sports/new").then(function(items){
 				infoObject.items = items;
 				var newSportList = NewSportTemplateFunction(infoObject);
 				var col = $(newSportList).prepend("<p>New sports:</p>");
-				$('.imgContainer').append(col);
+				$('.NewSportContainer').append(col);
 				$('.addToDb').each(function(){
 					var This = $(this);
 					console.log(this);
@@ -227,7 +227,7 @@ $(function(){
 				infoObject.items = items;
 				var sportList = SportTemplateFunction(infoObject);
 				var col = $(sportList).prepend("<p>Sports:</p>");
-				$('.imgContainer').append(col);
+				$('.SportContainer').append(col);
 			}, function(error){console.log(error);});
 		});
 		$('.nav_item:nth-of-type(4)').on('click',function(){
