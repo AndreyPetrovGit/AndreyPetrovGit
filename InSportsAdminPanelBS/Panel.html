@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>InSports Admin</title>
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+	<link href="http://bootstrapmaster.com/wp-content/themes/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="all">
+<!-- 	<link href="http://bootstrapmaster.com/wp-content/themes/bootstrap/css/font-awesome.min.css" rel="stylesheet" media="all"> -->
+<!-- 	<link href="http://bootstrapmaster.com/demo/style.css" rel="stylesheet" media="all">
+	<link href="http://bootstrapmaster.com/live/metro/css/bootstrap.min.css" type="text/css"> -->
+
+
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrapAdd.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript" src="http://bootstrapmaster.com/demo/custom.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+
+	<div class="wrapper">
+	</div>
+	<footer>
+	</footer>
+
+	<script type="text/html" id="Nav">
+		<div class="nav-collapse sidebar-nav">
+			<ul class="nav nav-tabs nav-stacked main-menu">
+				<% for(var i=0;i< pages.length;i++){ %>			
+					<li class="nav_item Clicable">
+						<p class="nav_text"><%- pages[i].theme %></p>
+					</li> 
+				<% }; %>
+			</ul>
+		</div>	
+	</script>
+
+		<script type="text/html" id="OfferTemplate">
+		<div class="imgContainer deletable OfferTemplateClass">
+<!-- 			<ul class="breadcrumb">
+				<li>
+					<i class="icon-home"></i>
+					<a href="Panel.html">Home</a> 
+					<i class="icon-angle-right"></i>
+				</li>
+				<li><a href="#">Offers</a></li>
+			</ul><br> -->
+			<table class="table table-striped table-bordered bootstrap-datatable datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+					<thead>
+						<tr role="row">
+							<% 	for(var i=0;i< offerFields.length;i++){ %>
+								<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending"><%-offerFields[i]%></th>
+							<%  }; %>
+						</tr>
+					</thead>
+					<tbody role="alert" aria-live="polite" aria-relevant="all">
+						<% 	for(var i=0;i< items.length;i++){ %>
+							<tr>
+							<% 	for(var j=0;j< offerFields.length;j++){ %>
+									<td>
+										<%if(offerFields[j] === 'offerDate'){%>
+											 <p><%-items[i][offerFields[j]][8]%><%-items[i][offerFields[j]][9]%>/<%-items[i][offerFields[j]][5]%><%-items[i][offerFields[j]][6]%>/<%-items[i][offerFields[j]][0]%><%-items[i][offerFields[j]][1]%><%-items[i][offerFields[j]][2]%><%-items[i][offerFields[j]][3]%> - <%-items[i][offerFields[j]][11]%><%-items[i][offerFields[j]][12]%>:<%-items[i][offerFields[j]][14]%><%-items[i][offerFields[j]][15]%></p>
+										<%}else if(offerFields[j] === 'people'){%>
+											<%  var userFields = Object.keys(items[i][offerFields[j]][0]);  %>
+											<div>
+												<table class="table table-striped table-bordered bootstrap-datatable datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+
+													<tbody role="alert" aria-live="polite" aria-relevant="all">
+														<% 	for(var k=0;k< items[i][offerFields[j]].length;k++){ %>
+															<tr class="personToggle">
+															<% 	for(var l=0;l< userFields.length;l++){ %>
+																	
+																		<%if(userFields[l] === 'userFacebookId'){%>
+																			<td class="additionInfo"><a href="https://www.facebook.com/<%-items[i][offerFields[j]][k][userFields[l]]%>"><button class="BuleButton">Go Facebook</button></a><br></td>
+																		<%}else if(userFields[l] === 'picture'){%>
+																			<td class="additionInfo"><img class="userPhoto" src="<%-items[i][offerFields[j]][k][userFields[l]]%>"></td>
+																		<%}else if(userFields[l] === 'name'){%>
+																			<td><%-items[i][offerFields[j]][k][userFields[l]]%></td>
+																		<%}else{%>
+																			<td class="additionInfo"> <%- userFields[l] %> : <%-items[i][offerFields[j]][k][userFields[l]]%></td>
+																		<%}%>
+																	
+																<%  }; %>
+															</tr>
+														<%  }; %>
+													</tbody>
+												</table>
+											</div>
+										<%}else{%>
+											<%-items[i][offerFields[j]]%>
+										<%}%>
+									</td>
+								<%  }; %>
+							</tr>
+						<%  }; %>
+					</tbody>
+				</table>
+		</div>
+	</script>
+
+
+	<script type="text/html" id="PanelUserTemplate">	
+			
+	</script>
+
+		<script type="text/html" id="UserTemplate">	
+			<div class="userList imgContainer deletable">
+				
+				<table class="table table-striped table-bordered bootstrap-datatable datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+					<thead>
+						<tr role="row">
+							<% 	for(var i=0;i< userFields.length;i++){ %>
+								<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending"><%-userFields[i]%></th>
+							<%  }; %>
+						</tr>
+					</thead>
+					<tbody role="alert" aria-live="polite" aria-relevant="all">
+						<% 	for(var i=0;i< items.length;i++){ %>
+							<tr>
+							<% 	for(var j=0;j< userFields.length;j++){ %>
+									<td>
+										<%if(userFields[j] === 'userFacebookId'){%>
+											<a href="https://www.facebook.com/<%-items[i][userFields[j]]%>"><button class="BuleButton">Go Facebook</button></a><br>
+										<%}else if(userFields[j] === 'picture'){%>
+											<img class="userPhoto" src="<%-items[i][userFields[j]]%>">
+										<%}else{%>
+											<%-items[i][userFields[j]]%>
+										<%}%>
+									</td>
+								<%  }; %>
+							</tr>
+						<%  }; %>
+					</tbody>
+				</table>
+			</div>
+		</script>
+
+
+
+
+
+
+	<script type="text/html" id="SportTemplate">	
+			<%  var sportFields = Object.keys(items[0]);  %>
+			<table class="table table-striped table-bordered bootstrap-datatable datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+				<thead>
+					<tr role="row">
+						<% 	for(var i=0;i< sportFields.length;i++){ %>
+							<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending"><%-sportFields[i]%></th>
+						<%  }; %>
+					</tr>
+				</thead>
+				<tbody role="alert" aria-live="polite" aria-relevant="all">
+					<% 	for(var i=0;i< items.length;i++){ %>
+						<tr>
+							<% 	for(var j=0;j< sportFields.length;j++){ %>
+								<td>
+									<%-items[i][sportFields[j]]%>
+								</td>
+							<%  }; %>
+						</tr>
+					<%  }; %>
+				</tbody>
+			</table>
+	</script>
+
+	<script type="text/html" id="NewSportTemplate">
+				<%  var sportFields = Object.keys(items[0]);  %>
+			<table class="table table-striped table-bordered bootstrap-datatable datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+				<thead>
+					<tr role="row">
+						<% 	for(var i=0;i< sportFields.length;i++){ %>
+							<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending"><%-sportFields[i]%></th>
+						<%  }; %>
+						<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending">Decision</th>
+					</tr>
+				</thead>
+				<tbody role="alert" aria-live="polite" aria-relevant="all">
+					<% 	for(var i=0;i< items.length;i++){ %>
+						<tr>
+							<% 	for(var j=0;j< sportFields.length;j++){ %>
+								<td>
+									<%-items[i][sportFields[j]]%>
+								</td>
+							<%  }; %>
+							<td><button  class="addToDb btn btn-small btn-success" id="<%-items[i].id%>">Accept</button>
+							<button  class="Decline btn btn-small btn-danger" name="<%-items[i].id%>">Decline</button></td>
+						</tr>
+					<%  }; %>
+				</tbody>
+			</table>
+	</script>
+	<script type="text/html" id="BugReportTemplate">
+		<div class="imgContainer deletable">
+			<ul class="breadcrumb">
+				<li>
+					<i class="icon-home"></i>
+					<a href="Panel.html">Home</a> 
+					<i class="icon-angle-right"></i>
+				</li>
+				<li><a href="#">BugReport</a></li>
+			</ul><br>
+			<%  var bugReportFields = Object.keys(items[0]);  %>
+			<table class="table table-striped table-bordered bootstrap-datatable datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+				<thead>
+					<tr role="row">
+						<% 	for(var i=0;i< bugReportFields.length;i++){ %>
+							<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending"><%-bugReportFields[i]%></th>
+						<%  }; %>
+						<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending">Marking</th>
+					</tr>
+				</thead>
+				<tbody role="alert" aria-live="polite" aria-relevant="all">
+					<% 	for(var i=0;i< items.length;i++){ %>
+						<tr>
+							<% 	for(var j=0;j< bugReportFields.length;j++){ %>
+								<td>
+									<%-items[i][bugReportFields[j]]%>
+								</td>
+							<%  }; %>
+							<td>
+								<% if(items[i].status === true){ %>
+									<p class="bug-status Actual">Actual</p>
+									<button  class="Complete GreenButton" name="<%-items[i].id%>">Mark as complete</button>
+								<%}else{%>
+									<p class="bug-status Completed">Completed</p>
+								<%};%>
+							</td>
+						</tr>
+					<%  }; %>
+				</tbody>
+			</table>
+		</div>
+	</script>
+
+	<script type="text/html" id="PushTemplate">
+		<div class="imgContainer deletable">
+		<ul class="breadcrumb">
+			<li>
+				<i class="icon-home"></i>
+				<a href="Panel.html">Home</a> 
+				<i class="icon-angle-right"></i>
+			</li>
+			<li><a href="#">Push</a></li>
+		</ul><br>
+	 	<form name="sendPush" class="sendPush deletable">
+	 		<p><h3>Push message:</h3></p>
+	 		<textarea name="text" style="width:50%" rows="10"></textarea> <br>
+	 		<input class="optionsRadios" type="radio" name="type" value="0.25">Всем <br>
+	 		<input class="optionsRadios" type="radio" name="type" value="0.5">Тем кто не заходил 1 неделю <br>
+	 		<input class="optionsRadios" type="radio" name="type" value="1">Тем кто не заходил 2 недели <br>
+	 		<input class="optionsRadios" type="radio" name="type" value="1">Тем кто не заходил 1 месяц <br>
+	 		<input class="optionsRadios" type="radio" name="type" value="3">Тем кто не заходил 3 месяца  <br>
+	 		<input class="optionsRadios" type="radio" name="type" value="6">Тем кто не заходил 6 месяцев <br>
+	 		<input class="Submit btn btn-small btn-success" type="submit" value="SEND PUSH" class=>
+	 	</form>
+	 </div>
+	</script>
+
+</body>
+</html>
